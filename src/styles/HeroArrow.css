@@ -1,0 +1,7 @@
+.arrow {
+    width: 100%;
+    height: 5px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: absolute;
+}
