@@ -16,6 +16,8 @@ gsap.registerPlugin(TextPlugin);
 export default function Hero() {
   const HeroRef = useRef(null);
 
+
+
   
 
   // useLayoutEffect(() => {
