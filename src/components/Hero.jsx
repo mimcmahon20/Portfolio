@@ -38,7 +38,7 @@ export default function Hero() {
     });
     //arrows
     timelineHero.to(".arrow", {
-      y: -600,
+      y: -800,
       opacity: 0,
       stagger: .1,
       duration: .3,
@@ -79,6 +79,28 @@ export default function Hero() {
         markers: false,
       },
     });
+
+    let timelineArrowBump = gsap.timeline({
+    });
+
+    timelineArrowBump.to(".arrow", {
+      y: -15,
+      stagger: .25,
+      duration: 1,
+      delay: 2,
+      ease: "power2.Out",
+    repeat: -1,
+  yoyo: true});
+    
+
+
+
+    if(true) {
+      timelineArrowBump.pause();
+      timelineArrowBump.kill();
+      } 
+    //   timelineArrowBump.play();
+    // }
   }, []);
 
   //animating the cursor

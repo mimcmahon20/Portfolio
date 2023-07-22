@@ -33,6 +33,12 @@
    z-index: 3;
 }
 
+@media screen and (max-width: 768px) {
+  .projects-heading {
+    font-size: 5rem;
+  }
+}
+
 a {
     text-decoration: none;
 }
@@ -145,4 +151,12 @@ a {
     height: 150px;
     background-color: rgb(21, 255, 0);
     mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 768px) {
+    .spotify-svg {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(251, 0, 255);
+    }
 }

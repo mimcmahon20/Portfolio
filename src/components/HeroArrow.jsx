@@ -19,7 +19,7 @@ export default function HeroArrow(props) {
    
 
   return (
-    <div style={{position: 'absolute', top: '50%'}}>
+    <div style={{position: 'absolute', top: '50%', zIndex: '2'}}>
       <div className="arrow" style={styles}></div>
     </div>
   );
