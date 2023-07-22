@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import Nav from "../components/Nav";
-import "../styles/Snake.css";
-
+import "../styles/Jammming.css";
+import { gsap } from "gsap";
  
-export default function Snake() {
+export default function Jammming() {
 
     //we will just set the window y to the top of the page
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function Snake() {
     return (
         <div>
             <Nav />
-            <h1>Snake</h1>
+            <h1>Jammming</h1>
             </div>
     );
 }

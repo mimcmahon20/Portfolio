@@ -13,7 +13,6 @@ export default function ProjectsList() {
   const projListRef = useRef(null);
   //
   useEffect(() => {
-    let el = projListRef.current;
     gsap.fromTo(
       ".projects-heading",
       {
@@ -75,7 +74,7 @@ export default function ProjectsList() {
         <div className="flex">
             <div className="projects-divider"></div>
         </div>
-      <Link>
+      <Link to="/Jammming">
         <JammmingListItem numHeadings={numHeadings} name={"jammming"}/>
       </Link>
         <div className="flex">

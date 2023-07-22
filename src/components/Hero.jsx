@@ -90,7 +90,6 @@ export default function Hero() {
       duration: 0.5,
     });
   }, []);
-
   const words = ["Developer", "Friend", "Engineer", "Designer", "Creator", "Programmer"];
   //animating the words
   useEffect(() => {
@@ -103,8 +102,8 @@ export default function Hero() {
         ease: "power2.inOut",
       });
       tlMasterText.add(tlText);
-    });
-  }, []);
+    })
+  }, [words]);
 
   function calcArrows(height) {
     let arrows = [];
