@@ -21,27 +21,27 @@ export default function SnakeListItem(props) {
     });
 
     let timelineSnakeSmall = gsap.timeline({
-        defaults: { ease: "linear" },
-        });
+      defaults: { ease: "linear" },
+    });
 
     snake.addEventListener("mouseenter", () => {
       timelineSnake.clear();
       timelineSnakeSmall.clear();
       tl.clear();
       timelineSnake.to(boxesLarge, {
-        duration: 2.5,
+        duration: 1,
         x: 400,
         y: 0,
-        ease: "linear",
+        ease: "power1.out",
         yoyo: true,
       });
       timelineSnakeSmall.to(boxesSmall, {
-        duration: 1.5,
+        duration: 1,
         x: 0,
         y: 200,
-        ease: "linear",
+        ease: "power1.out",
         yoyo: true,
-        })
+      });
       tl.to(
         headingContainer,
         {
@@ -62,24 +62,23 @@ export default function SnakeListItem(props) {
         { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
         "-=0.5"
       );
-      
     });
     snake.addEventListener("mouseleave", () => {
       tl.clear();
       timelineSnake.clear();
       timelineSnakeSmall.clear();
       timelineSnake.to(boxesLarge, {
-        duration: .5,
+        duration: 0.5,
         x: 0,
         y: 0,
-        ease: "linear",
+        ease: "power1.out",
       });
       timelineSnakeSmall.to(boxesSmall, {
-        duration: .5,
+        duration: 0.5,
         x: 0,
         y: 0,
-        ease: "linear",
-        })
+        ease: "power1.out",
+      });
       tl.to(
         headingContainer,
         {
@@ -100,7 +99,6 @@ export default function SnakeListItem(props) {
         { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
         "-=0.5"
       );
-      
     });
   }, []);
 

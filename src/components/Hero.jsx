@@ -8,11 +8,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
+
 export default function Hero() {
   const HeroRef = useRef(null);
+
+  
 
   // useLayoutEffect(() => {
   //   const ctx = gsap.context((self) => {
@@ -34,10 +38,10 @@ export default function Hero() {
     });
     //arrows
     timelineHero.to(".arrow", {
-      y: -1000,
+      y: -600,
       opacity: 0,
-      stagger: 2,
-      duration: 3,
+      stagger: .1,
+      duration: .3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: el,
@@ -50,7 +54,7 @@ export default function Hero() {
     //animating the hero text
     timelineHero.to(".first-line", {
       duration: 1,
-      x: 150,
+      x: 0,
       opacity: 0,
       scrollTrigger: {
         trigger: el,
@@ -63,7 +67,7 @@ export default function Hero() {
 
     timelineHero.to(".second-line", {
       duration: 1,
-      x: -150,
+      x: 0,
       opacity: 0,
       scale: 2,
       delay: 2,
