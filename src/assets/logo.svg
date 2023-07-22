@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_87)">
+<rect y="50" width="23.25" height="200" fill="white"/>
+<rect width="36.9641" height="149.177" transform="matrix(0.383444 -0.923564 0.383444 0.923564 9.30005 84.1387)" fill="white"/>
+<rect width="37.096" height="148.711" transform="matrix(-0.380141 -0.924929 0.386766 -0.922178 66.5958 221.713)" fill="white"/>
+<rect x="109.607" y="50" width="23.25" height="200" fill="white"/>
+<rect x="166.071" y="50" width="23.4375" height="200" fill="white"/>
+<rect width="37.008" height="149.354" transform="matrix(0.386077 -0.922467 0.386077 0.922467 175.446 84.1387)" fill="white"/>
+<rect width="37.1394" height="148.891" transform="matrix(-0.382759 -0.923848 0.389414 -0.921063 233.204 221.713)" fill="white"/>
+<rect x="276.562" y="50" width="23.4375" height="200" fill="white"/>
+<rect x="134" y="250" width="125" height="32" transform="rotate(-90 134 250)" fill="red"/>
+<rect x="134" y="250" width="125" height="32" transform="rotate(-90 134 250)" fill="red"/>
+<ellipse cx="150" cy="69" rx="16" ry="15" fill="red"/>
+</g>
+<defs>
+<clipPath id="clip0_1_87">
+<rect width="300" height="300" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -2,3 +2,8 @@
     height: 100vh;
     background-color: #060606;
 }
+
+.arrows-container {
+    height: 40vh;
+    width: 100%;
+}

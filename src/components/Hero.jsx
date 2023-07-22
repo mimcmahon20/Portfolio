@@ -14,13 +14,19 @@ gsap.registerPlugin(TextPlugin);
 export default function Hero() {
   const HeroRef = useRef(null);
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+        self.HeroRef = HeroRef;
+    })
+  }, HeroRef);
+
 //Animating the arrows
   useEffect(() => {
     let el = HeroRef.current;
     gsap.to(".arrow", {
       y: -150,
       opacity: 0,
-      stagger: 0.3,
+      stagger: 1,
       scrollTrigger: {
         trigger: el,
         start: "bottom bottom",
@@ -31,22 +37,6 @@ export default function Hero() {
     });
   }, []);
 
-//Animating the text
-    // useEffect(() => {
-    //     let el = HeroRef.current;
-    //     gsap.to(".congratulations", {
-    //         duration: 1,
-    //         x: -150,
-    //         opacity: 0,
-    //         scrollTrigger: {
-    //             trigger: el,
-    //             start: "bottom+=100 bottom",
-    //             end: "bottom center",
-    //             scrub: 1,
-    //             markers: false
-    //         }
-    //     });
-    // });
 
     useEffect(() => {
         let el = HeroRef.current;
@@ -64,13 +54,14 @@ export default function Hero() {
         });
     });
 
+    //animating the second line
     useEffect(() => {
         let el = HeroRef.current;
         gsap.to(".second-line", {
             duration: 1,
             x: -150,
             opacity: 0,
-            scale: 0,
+            scale: 2,
             scrollTrigger: {
                 trigger: el,
                 start: "bottom+=100 bottom",
@@ -81,11 +72,9 @@ export default function Hero() {
         });
     });
 
-    //animating the cursor and then switching between words
-    const words = ['Developer', 'Friend', 'Engineer'];
-
+    
+    //animating the cursor
     useEffect(() => {
-        let el = HeroRef.current;
         gsap.to(".cursor", {
             opacity: 0,
             ease: "power2.inOut",
@@ -94,8 +83,11 @@ export default function Hero() {
         });
     }, []);
 
+    
+    
+    const words = ['Developer', 'Friend', 'Engineer'];
+    //animating the words
     useEffect(() => {
-        let el = HeroRef.current;
         let tlMasterText = gsap.timeline({repeat: -1});
         words.forEach(word => {
             let tlText = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1});
@@ -108,17 +100,24 @@ export default function Hero() {
         });
     }, []);
 
+
+    function calcArrows(height) {
+        let arrows = [];
+        for(let i = 0; i < 8; i++) {
+            arrows.push(<HeroArrow key={i} width={height - i*100 + 50} />);
+        }
+        return arrows;
+    }
+
+    let height = window.innerHeight / 2;
+
   return (
     <div ref={HeroRef} className="hero">
       <Nav />
       <HeroText />
-      
-      <HeroArrow width={500} />
-      <HeroArrow width={400} />
-      <HeroArrow width={300} />
-      <HeroArrow width={200} />
-      <HeroArrow width={100} />
-      <div style={{ height: "200vh" }}></div>
+      <div className="arrows-container">
+        {calcArrows(height)}
+      </div>
     </div>
   );
 }

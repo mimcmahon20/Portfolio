@@ -4,7 +4,8 @@ import "../styles/HeroText.css";
 
 
 export default function HeroText() {
-    
+
+
 
     return (
         <div className="heroText-container">
