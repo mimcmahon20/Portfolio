@@ -2,10 +2,11 @@
     height: 5px;
     width: 80%;
     background-color: #0a0a0a;
-    margin: 20px;
+    margin: 50px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
+

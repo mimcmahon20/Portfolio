@@ -78,29 +78,19 @@ export default function Hero() {
         scrub: 1,
         markers: false,
       },
-    });
+    },);
 
-    let timelineArrowBump = gsap.timeline({
-    });
-
-    timelineArrowBump.to(".arrow", {
-      y: -15,
-      stagger: .25,
+    timelineHero.to(".scroll-to-projects", {
       duration: 1,
-      delay: 2,
-      ease: "power2.Out",
-    repeat: -1,
-  yoyo: true});
-    
-
-
-
-    if(true) {
-      timelineArrowBump.pause();
-      timelineArrowBump.kill();
-      } 
-    //   timelineArrowBump.play();
-    // }
+      opacity: 0,
+      scrollTrigger: {
+        trigger: el,
+        start: "bottom+=100 bottom",
+        end: "bottom center",
+        scrub: 1,
+        markers: false,
+      },
+    }, ">3")
   }, []);
 
   //animating the cursor
