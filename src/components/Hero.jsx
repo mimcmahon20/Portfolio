@@ -14,11 +14,11 @@ gsap.registerPlugin(TextPlugin);
 export default function Hero() {
   const HeroRef = useRef(null);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context((self) => {
-        self.HeroRef = HeroRef;
-    })
-  }, HeroRef);
+  // useLayoutEffect(() => {
+  //   const ctx = gsap.context((self) => {
+  //       self.HeroRef = HeroRef;
+  //   })
+  // }, HeroRef);
 
 //Animating the arrows
   useEffect(() => {
