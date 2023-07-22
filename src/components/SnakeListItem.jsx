@@ -8,8 +8,6 @@ export default function SnakeListItem(props) {
   useEffect(() => {
     //add a listener to snake class that moves a .box class within the list-item class when snake class is mouse entered
     const snake = document.querySelector(".snake");
-    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
     let boxesLarge = document.querySelectorAll(".box-large");
     let boxesSmall = document.querySelectorAll(".box-small");
 
@@ -21,13 +19,9 @@ export default function SnakeListItem(props) {
       defaults: { ease: "linear" },
     });
 
-    
-    
-
     snake.addEventListener("mouseenter", () => {
       timelineSnake.clear();
       timelineSnakeSmall.clear();
-      tl.clear();
       timelineSnake.to(boxesLarge, {
         duration: 1,
         x: 400,
@@ -44,7 +38,6 @@ export default function SnakeListItem(props) {
       });
     });
     snake.addEventListener("mouseleave", () => {
-      tl.clear();
       timelineSnake.clear();
       timelineSnakeSmall.clear();
       timelineSnake.to(boxesLarge, {
