@@ -6,7 +6,7 @@ export default function JammmingListItem(props) {
     return (
         <div className="list-item">
             <div className="heading-container">
-            {numHeadings(10, "Jammming")}
+            {numHeadings(10, "jammming")}
 
             </div>
             {/* <h2 className="projects-subheading">HTML, CSS & Javascript</h2> */}
