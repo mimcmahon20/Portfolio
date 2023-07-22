@@ -6,9 +6,13 @@ import Snake from "./pages/Snake";
 import Jammming from "./pages/Jammming";
 import Nav from "./components/Nav";
 
+
 import "./styles/App.css";
 
 export default function App() {
+ 
+  
+
   return (
     <BrowserRouter>
       <ReactLenis root>

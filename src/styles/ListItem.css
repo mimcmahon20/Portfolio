@@ -1,10 +1,28 @@
 .list-item {
-  height: 700px;
+  height: 500px;
   width: 100%;
   position: relative;
   --size-box-large: 50px;
   --size-box-small: 25px;
+  overflow: hidden;
 }
+
+.list-item {
+    background-color: #f3f3f3;
+    color: #0a0a0a;
+    transition: all .5s ease-out;
+}
+
+.list-item:hover {
+    background-color: #0a0a0a;
+}
+
+.list-item:hover > .heading-container {
+    color: #f3f3f3;
+    transition: all 0s ease-out;
+}
+
+
 
 .heading-container {
   width: 220%;
@@ -29,8 +47,9 @@
   justify-content: center;
   font-size: 5rem;
   text-align: center;
-   margin: 0;
+   margin-right: 10px;
    z-index: 3;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -47,8 +66,63 @@ a {
     position: absolute;
     top: 20%;
     left: 20%;
-    color: #f3f3f3;
     transition: all .5s ease-out;
+    font-weight: 500;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-svg {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.html-svg {
+    background-image: url("../assets/html.svg");
+}
+
+.css-svg {
+    background-image: url("../assets/css.svg");
+}
+
+.js-svg {
+    background-image: url("../assets/js.svg");
+}
+
+.react-svg {
+    background-image: url("../assets/react.svg");
+}
+
+.node-svg {
+    background-image: url("../assets/node.svg");
+}
+
+
+
+
+
+.svgs {
+    opacity: 0;
+    scale: 0;
+}
+
+.bits-svgs {
+    background-color: #0a0a0ab6;
+}
+
+
+.jammming:hover > .jammming-svgs,
+.snakeList:hover > .snake-svgs,
+.bitsList:hover > .bits-svgs,
+.oldPortfolio:hover > .portfolio-svgs,
+.pFive:hover > .pFive-svgs {
+    opacity: 1;
+    scale: 1;
 }
 
 .box {
@@ -160,3 +234,136 @@ a {
         background-color: rgb(251, 0, 255);
     }
 }
+
+.bits-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bits {
+    width: 10%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+    color:#f0f0f096;
+}
+
+.bits:nth-of-type(even) {
+    color: rgba(23, 124, 23, 0.664);
+}
+
+
+.portSvg {
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.svg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+
+.gear-svg {
+    background-image: url("../assets/gear.svg");
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+
+.desktop-svg {
+    background-image: url("../assets/desktop.svg");
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    mix-blend-mode: difference;
+    transform: rotateZ(-30deg);
+}
+
+.phone-svg {
+    background-image: url("../assets/phone.svg");
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    mix-blend-mode: difference;
+    transform: rotateZ(30deg);
+}
+
+.exclamation-svg {
+    background-image: url("../assets/exclamation.svg");
+    position: absolute;
+    top: 55%;
+    left: 65%;
+}
+
+@media screen and (max-width: 768px) {
+    .portSvg {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.pFive-large-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pFive-container {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+
+.five-svg {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+.plus-svg {
+    background-image: url("../assets/plus.svg");    
+    
+}
+
+.minus-svg {
+    background-image: url("../assets/minus.svg");
+
+}
+
+.percent-svg {
+    background-image: url("../assets/percent.svg");
+
+}
+
+.equal-svg {
+    background-image: url("../assets/equal.svg");
+
+}
+
+@media screen and (max-width: 768px) {
+    .five-svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+

@@ -8,11 +8,6 @@ export default function SnakeListItem(props) {
   useEffect(() => {
     //add a listener to snake class that moves a .box class within the list-item class when snake class is mouse entered
     const snake = document.querySelector(".snake");
-    const headingContainer = document.querySelector(".heading-container");
-    const heading = document.querySelector(".projects-heading");
-    const subheading = document.querySelector(".projects-subheading");
-    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
     let boxesLarge = document.querySelectorAll(".box-large");
     let boxesSmall = document.querySelectorAll(".box-small");
 
@@ -27,7 +22,6 @@ export default function SnakeListItem(props) {
     snake.addEventListener("mouseenter", () => {
       timelineSnake.clear();
       timelineSnakeSmall.clear();
-      tl.clear();
       timelineSnake.to(boxesLarge, {
         duration: 1,
         x: 400,
@@ -42,29 +36,8 @@ export default function SnakeListItem(props) {
         ease: "power1.out",
         yoyo: true,
       });
-      tl.to(
-        headingContainer,
-        {
-          ease: "Power2.easeOut",
-          duration: 0.5,
-          backgroundColor: "#060606",
-          color: "#f3f3f3",
-        },
-        "-=0.5"
-      );
-      tl.to(
-        heading,
-        { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
-        "-=0.5"
-      );
-      tl.to(
-        subheading,
-        { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
-        "-=0.5"
-      );
     });
     snake.addEventListener("mouseleave", () => {
-      tl.clear();
       timelineSnake.clear();
       timelineSnakeSmall.clear();
       timelineSnake.to(boxesLarge, {
@@ -79,31 +52,11 @@ export default function SnakeListItem(props) {
         y: 0,
         ease: "power1.out",
       });
-      tl.to(
-        headingContainer,
-        {
-          ease: "Power2.easeOut",
-          duration: 0.5,
-          backgroundColor: "#f3f3f3",
-          color: "#060606",
-        },
-        "-=0.5"
-      );
-      tl.to(
-        heading,
-        { ease: "Power2.easeOut", duration: 0.5, color: "#060606" },
-        "-=0.5"
-      );
-      tl.to(
-        subheading,
-        { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
-        "-=0.5"
-      );
     });
   }, []);
 
   return (
-    <div className="list-item">
+    <div className="list-item snakeList">
       <div className="box box-large"></div>
       <div className="box box-large"></div>
       <div className="box box-large"></div>
@@ -115,7 +68,11 @@ export default function SnakeListItem(props) {
       <div className="box box-small"></div>
       <div className="food food-small"></div>
       <div className="heading-container snake">{numHeadings(10, "snake")}</div>
-      <h2 className="projects-subheading">HTML, CSS & Javascript</h2>
+      <div className="projects-subheading snake-svgs svgs">
+        <div className="html-svg language-svg" alt="html"></div>
+        <div className="css-svg language-svg" alt="css"></div>
+        <div className="js-svg language-svg" alt="js"></div>
+      </div>
     </div>
   );
 }
