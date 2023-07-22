@@ -1,0 +1,18 @@
+.projectsIntro {
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.projectsIntro-header {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    opacity: 0;
+}

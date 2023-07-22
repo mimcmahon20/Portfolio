@@ -47,8 +47,6 @@ export default function OldPortfolio(props) {
         rotation: 0,
         ease: "power1.out",
       }, "<");
-
-
     });
   }, []);
 

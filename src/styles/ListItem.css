@@ -15,7 +15,6 @@
 
 .list-item:hover {
     background-color: #0a0a0a;
-    scale: 1.025;
 }
 
 .list-item:hover > .heading-container {
@@ -313,3 +312,58 @@ a {
         height: 100px;
     }
 }
+
+.pFive-large-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pFive-container {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+
+.five-svg {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+.plus-svg {
+    background-image: url("../assets/plus.svg");    
+    
+}
+
+.minus-svg {
+    background-image: url("../assets/minus.svg");
+
+}
+
+.percent-svg {
+    background-image: url("../assets/percent.svg");
+
+}
+
+.equal-svg {
+    background-image: url("../assets/equal.svg");
+
+}
+
+@media screen and (max-width: 768px) {
+    .five-svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
