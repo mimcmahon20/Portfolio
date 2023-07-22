@@ -34,10 +34,11 @@ export default function Hero() {
     });
     //arrows
     timelineHero.to(".arrow", {
-      y: -150,
+      y: -1000,
       opacity: 0,
-      stagger: 1,
-      duration: 1,
+      stagger: 2,
+      duration: 3,
+      ease: "power2.inOut",
       scrollTrigger: {
         trigger: el,
         start: "bottom bottom",
@@ -65,6 +66,7 @@ export default function Hero() {
       x: -150,
       opacity: 0,
       scale: 2,
+      delay: 2,
       scrollTrigger: {
         trigger: el,
         start: "bottom+=100 bottom",
@@ -114,7 +116,10 @@ export default function Hero() {
     <div ref={HeroRef} className="hero">
       <Nav />
       <HeroText />
-      <div className="arrows-container">{calcArrows(height)}</div>
+      <div className="arrows-container">
+        {calcArrows(height)}
+        <h3 className="scroll-to-projects">Scroll for projects</h3>
+        </div>
     </div>
   );
 }

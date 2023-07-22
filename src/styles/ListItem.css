@@ -1,6 +1,9 @@
 .list-item {
   height: 500px;
   width: 100%;
+  position: relative;
+  --size-box-large: 50px;
+  --size-box-small: 25px;
 }
 
 .heading-container {
@@ -27,9 +30,82 @@
   font-size: 5rem;
   text-align: center;
    margin: 0;
+   z-index: 3;
 }
 
 a {
     text-decoration: none;
 }
 
+.box {
+    background-color: rgb(0, 255, 55);
+    position: absolute;
+    z-index: 2;
+}
+
+.box-large {
+    width: var(--size-box-large);
+    height: var(--size-box-large);
+    top: 50%;
+}
+
+.box-large:nth-of-type(1) {
+    left: 20%;
+}
+
+.box-large:nth-of-type(2) {
+    left: calc(20% + 60px);
+}
+
+.box-large:nth-of-type(3) {
+    left: calc(20% + 120px);
+}
+
+.box-large:nth-of-type(4) {
+    left: calc(20% + 180px);
+}
+
+.box-small {
+    width: var(--size-box-small);
+    height: var(--size-box-small);
+    left: 70%;
+    
+}
+
+
+.box-small:nth-of-type(n) {
+    top: calc(20%);
+}
+
+.box-small:nth-of-type(6) {
+    top: calc(20% + 30px);
+}
+
+.box-small:nth-of-type(7) {
+    top: calc(20% + 60px);
+}
+
+.box-small:nth-of-type(8) {
+    top: calc(20% + 90px);
+}
+
+
+
+.food {
+    background-color: red;
+    position: absolute;
+}
+
+.food-large {
+    top: 50%;
+    left: 60%;
+    width: var(--size-box-large);
+    height: var(--size-box-large);
+}
+
+.food-small {
+    bottom: 0%;
+    left: 70%;
+    width: var(--size-box-small);
+    height: var(--size-box-small);
+}

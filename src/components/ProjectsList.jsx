@@ -48,24 +48,24 @@ export default function ProjectsList() {
   //Adding mouse listener to mouse enter and exit on each heading-container
   //that changes the background of the heading-container to a random color
 
-  useEffect(() => {
-    let el = projListRef.current;
-    let headingContainers = el.querySelectorAll(".heading-container");
-    headingContainers.forEach((headingContainer) => {
-      headingContainer.addEventListener("mouseenter", () => {
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        headingContainer.style.backgroundColor = "#" + randomColor;
-        gsap.to(headingContainer, {
-            duration: 0.5,
+//   useEffect(() => {
+//     let el = projListRef.current;
+//     let headingContainers = el.querySelectorAll(".heading-container");
+//     headingContainers.forEach((headingContainer) => {
+//       headingContainer.addEventListener("mouseenter", () => {
+//         let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//         headingContainer.style.backgroundColor = "#" + randomColor;
+//         gsap.to(headingContainer, {
+//             duration: 0.5,
             
-            ease: "power1.Out",
-        });
-      });
-      headingContainer.addEventListener("mouseleave", () => {
-        headingContainer.style.backgroundColor = "transparent";
-      });
-    });
-  });
+//             ease: "power1.Out",
+//         });
+//       });
+//       headingContainer.addEventListener("mouseleave", () => {
+//         headingContainer.style.backgroundColor = "transparent";
+//       });
+//     });
+//   });
 
   return (
     <div className="projects-list" ref={projListRef}>
