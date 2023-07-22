@@ -1,0 +1,25 @@
+.hero {
+    height: 100vh;
+    background-color: #060606;
+}
+
+.arrows-container {
+    height: 40vh;
+    width: 100%;
+}
+
+.scroll-to-projects{ 
+    position: absolute;
+    color: rgba(177, 177, 177, 0.726);
+    transform: RotateZ(90deg);
+    bottom: 5rem;
+    right: -1rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-projects {
+        display: none;
+    }
+}
