@@ -33,7 +33,6 @@ export default function SnakeListItem(props) {
         x: 400,
         y: 0,
         ease: "linear",
-        repeat: -1,
         yoyo: true,
       });
       timelineSnakeSmall.to(boxesSmall, {
@@ -41,7 +40,6 @@ export default function SnakeListItem(props) {
         x: 0,
         y: 200,
         ease: "linear",
-        repeat: -1,
         yoyo: true,
         })
       tl.to(
@@ -99,7 +97,7 @@ export default function SnakeListItem(props) {
       );
       tl.to(
         subheading,
-        { ease: "Power2.easeOut", duration: 0.5, color: "#060606" },
+        { ease: "Power2.easeOut", duration: 0.5, color: "#f3f3f3" },
         "-=0.5"
       );
       
@@ -119,7 +117,7 @@ export default function SnakeListItem(props) {
       <div className="box box-small"></div>
       <div className="food food-small"></div>
       <div className="heading-container snake">{numHeadings(10, "snake")}</div>
-      {/* <h2 className="projects-subheading">HTML, CSS & Javascript</h2> */}
+      <h2 className="projects-subheading">HTML, CSS & Javascript</h2>
     </div>
   );
 }

@@ -7,7 +7,7 @@
 }
 
 .heading-container {
-  width: 200%;
+  width: 220%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -37,6 +37,14 @@ a {
     text-decoration: none;
 }
 
+.projects-subheading {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: #f3f3f3;
+    transition: all .5s ease-out;
+}
+
 .box {
     background-color: rgb(0, 255, 55);
     position: absolute;
@@ -54,15 +62,15 @@ a {
 }
 
 .box-large:nth-of-type(2) {
-    left: calc(20% + 60px);
+    left: calc(20% + 10px + var(--size-box-large));
 }
 
 .box-large:nth-of-type(3) {
-    left: calc(20% + 120px);
+    left: calc(20% + 20px + var(--size-box-large) * 2);
 }
 
 .box-large:nth-of-type(4) {
-    left: calc(20% + 180px);
+    left: calc(20% + 30px + var(--size-box-large) * 3);
 }
 
 .box-small {
@@ -78,15 +86,15 @@ a {
 }
 
 .box-small:nth-of-type(6) {
-    top: calc(20% + 30px);
+    top: calc(20% + 5px + var(--size-box-small));
 }
 
 .box-small:nth-of-type(7) {
-    top: calc(20% + 60px);
+    top: calc(20% + 10px + var(--size-box-small) * 2);
 }
 
 .box-small:nth-of-type(8) {
-    top: calc(20% + 90px);
+    top: calc(20% + 20px + var(--size-box-small) * 3);
 }
 
 
@@ -108,4 +116,27 @@ a {
     left: 70%;
     width: var(--size-box-small);
     height: var(--size-box-small);
+}
+
+@media screen and (max-width: 768px) {
+    .list-item {
+        --size-box-small: 10px;
+        --size-box-large: 20px;
+    }
+}
+
+
+
+
+.spotify-svg {
+    background-image: url("../assets/spotify.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: 1px solid #ff0000;
+    background-color: rgb(21, 255, 0);
+    mix-blend-mode: difference;
 }

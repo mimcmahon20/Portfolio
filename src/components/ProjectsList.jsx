@@ -27,7 +27,7 @@ export default function ProjectsList() {
           start: "top bottom",
           end: "bottom top",
           scrub: true,
-          markers: false,
+          markers: true,
         },
       }
     );
@@ -72,11 +72,15 @@ export default function ProjectsList() {
       <Link to="/Snake">
         <SnakeListItem numHeadings={numHeadings} name={"snake"}/>
       </Link>
-
+        <div className="flex">
+            <div className="projects-divider"></div>
+        </div>
       <Link>
         <JammmingListItem numHeadings={numHeadings} name={"jammming"}/>
       </Link>
-
+        <div className="flex">
+            <div className="projects-divider"></div>
+        </div>
       <Link>
         <BitsListItem numHeadings={numHeadings} name={"bits"}/>
       </Link>

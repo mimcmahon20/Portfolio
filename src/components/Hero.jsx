@@ -87,7 +87,7 @@ export default function Hero() {
     });
   }, []);
 
-  const words = ["Developer", "Friend", "Engineer"];
+  const words = ["Developer", "Friend", "Engineer", "Designer", "Creator", "Programmer"];
   //animating the words
   useEffect(() => {
     let tlMasterText = gsap.timeline({ repeat: -1 });
