@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import "../styles/About.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,11 +6,6 @@ import SketchTransition from "./SketchTransition";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutTransition() {
-    
-    console.log(document.querySelector(".sketchy"));
-
-
-
     useEffect(() => {
         let timelineAbout = gsap.timeline({
             scrollTrigger: {
@@ -38,17 +33,6 @@ export default function AboutTransition() {
 
    let windowWidth = window.innerWidth;
     let windowHeight = window.innerHeight;
-    console.log(windowHeight);
-
-    function handleMouseClick() {
-        console.log("click");
-    }
-
-    function windowResized() {
-        windowWidth = window.innerWidth;
-        windowHeight = window.innerHeight;
-    }
-
     return (
         <div className="about-transition">
             <SketchTransition style={{width: windowWidth, height: windowHeight}} className="sketchy"/>

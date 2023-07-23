@@ -4,7 +4,7 @@ import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css"
-import SnakeListItem from "../components/SnakeListItem";
+import PFiveListItem from "../components/PFiveListItem";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
@@ -12,7 +12,7 @@ import ProjectFramework from "../components/ProjectFramework";
 import ProjectLinks from "../components/ProjectLinks";
 import BackButton from "../components/BackButton";
 
-export default function Snake() {
+export default function PFive() {
   function numHeadings(num, name) {
     let headings = [];
     for (let i = 0; i < num; i++) {
@@ -27,27 +27,34 @@ export default function Snake() {
 
   function generateProject() {
     let titleSection = (<div className="project-section">
-    <ProjectTitle title={"Snake"} />
+    <ProjectTitle title={"P5 Fun :)"} />
     <ProjectDescription
       description={
-        "A combination of a Djikstra's pathfinding algorithm and the classic game Snake. The snake attempts to avoid its tail and the walls while collecting food thus extending its body. Currently, the snake is able to survive until it surrounds itself and loses vision of the food. I acheived this through first creating a visualizer for Djikstra's algorithm, and then creating the game of Snake. Combining the two is where the true challenge waited..."
+        "I've always had a fascination with math and visualizations in coding. My first projects when I got my hands on GUIs in Java were all implementing physics equations I had learned in my class that year. I've since discovered the P5.js library, and have been having a blast creating visualizations and animations."
+      }
+    />
+
+<ProjectDescription
+      description={
+        "I've followed along with Codetrain's Coding Challenge serious on Youtube, following a few of his projects and expanding where he ends off. Specifically, I have implemented a genetic algorithm that allows the user to create a population of dots that learn to reach a goal."
       }
     />
   </div>);
 
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
-    <ProjectFramework languages={["HTML","CSS","Javascript","Djikstra's Algorithm"]} />
-    <ProjectLinks className="outgoing-links" github={"https://github.com/mimcmahon20/snake"} live={"https://mimcmahon20.github.io/snake/"}/>
+    <ProjectFramework languages={["Javascript", "P5"]} />
+    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">
-    <h2>Challenges</h2>
+    <h2>Plans for the future</h2>
     <ProjectDescription
       description={
-        "The biggest challenge I faced with this project was merging the algorithm into the snake. I faced many data structure issues and started to learned the true power of Javascript."
+        "I'm hoping to continue to learn more about P5 and other visualization libraries, specifically WEBGL. I'm also hoping to learn more about the math behind the visualizations, and how to implement more complex algorithms that I learn about in my studies."
       }
     />
+    
   </div>);
 
 
@@ -81,9 +88,9 @@ export default function Snake() {
       <Nav />
         <BackButton />
       <TransitionToProject>
-        <SnakeListItem numHeadings={numHeadings} />
+        <PFiveListItem numHeadings={numHeadings} />
         <div className="media-carousel">
-          <ProjectMedia url={'/Videos/snakevideo.mp4'} type={"video"} />
+          <ProjectMedia url={""} type={"video"} />
         </div>
         <div className="project-layout">
           {generateProject()}
