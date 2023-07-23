@@ -7,6 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutTransition() {
     
+    console.log(document.querySelector(".sketchy"));
+
+
+
     useEffect(() => {
         let timelineAbout = gsap.timeline({
             scrollTrigger: {
@@ -24,8 +28,8 @@ export default function AboutTransition() {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".about-transition",
-                start: "center bottom",
-                end: "top top",
+                start: "center center",
+                end: "bottom center",
                 scrub: true,
                 markers: true,
             },
@@ -36,6 +40,10 @@ export default function AboutTransition() {
     let windowHeight = window.innerHeight;
     console.log(windowHeight);
 
+    function handleMouseClick() {
+        console.log("click");
+    }
+
     function windowResized() {
         windowWidth = window.innerWidth;
         windowHeight = window.innerHeight;
@@ -43,7 +51,7 @@ export default function AboutTransition() {
 
     return (
         <div className="about-transition">
-            <SketchTransition style={{width: windowWidth, height: windowHeight}}/>
+            <SketchTransition style={{width: windowWidth, height: windowHeight}} className="sketchy"/>
         </div>
     )
 }
