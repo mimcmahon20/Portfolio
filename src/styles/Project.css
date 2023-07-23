@@ -1,0 +1,145 @@
+.back-button {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(10vh - 25px);
+    left: 10%;
+    position: fixed;
+    background-color: #000000;
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    background-image: url("../assets/back.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    z-index: 10;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.back-bar {
+    width: 0px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 8px);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.project-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-around;
+    width: 100%;
+    aspect-ratio: preserve;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.media-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 1px 0;
+    background-color: #e3efe0;
+    border-radius: 10px;
+    border: 1px solid white;
+    min-height: 300px;
+}
+
+.project-section > h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.project-section > .project-title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.project-description {
+    font-size: 1.5rem;
+    text-align: left;
+    text-indent: 35px;
+    font-family: 'SFPRODISPLAYREGULAR', sans-serif;
+    margin: 10px;
+}
+
+.framework-section {
+    position: relative;
+}
+
+.project-links {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 70px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link-svg{ 
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: rgb(71, 63, 71);
+}
+
+.link-svg:hover {
+    border-radius: 15%;
+}
+
+.github-svg {
+    background-image: url('../assets/code.svg');
+}
+
+.live-svg {
+    background-image: url('../assets/next.svg');
+    background-size: 80%;
+}
+
+.project-links > a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1500px) {
+    .project-section {
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .project-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-section {
+        width: 95%;
+    }
+}

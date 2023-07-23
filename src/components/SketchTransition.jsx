@@ -1,18 +1,16 @@
 import React from "react";
 import Sketch from "react-p5";
 
-let frameCount;
+
 let width;
 let height;
 let cnv;
 let mouseX, mouseY;
 //red, orange, yellow, green, blue, purple, pink, black, white
 let active = [false, true, false, false, false, false, false, false, false];
-let buttons = [];
-
+// eslint-disable-next-line
 export default (props) => {
   const setup = (p5, canvasParentRef) => {
-    frameCount = 0;
     let canvasExists = p5.canvas.id[p5.canvas.id.length - 1];
     if (canvasExists !== "1") {
       cnv = p5.createCanvas(props.style.width, props.style.height).parent(
@@ -28,7 +26,7 @@ export default (props) => {
       mouseX = event.offsetX;
       mouseY = event.offsetY;
     });
-    cnv.mouseClicked((event) => {
+    cnv.mouseClicked(() => {
       let ind = currentColorIndex(active);
       active[ind] = false;
       if(ind === 8) {

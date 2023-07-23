@@ -82,19 +82,19 @@ export default function ProjectsList() {
       <div className="flex">
         <div className="projects-divider"></div>
       </div>
-      <Link>
+      <Link to="/Bits">
         <BitsListItem numHeadings={numHeadings}/>
       </Link>
       <div className="flex">
         <div className="projects-divider"></div>
       </div>
-      <Link>
+      <Link to="/Portfolio">
         <OldPortfolio numHeadings={numHeadings} />
       </Link>
       <div className="flex">
         <div className="projects-divider"></div>
       </div>
-      <Link>
+      <Link to="/PFive">
         <PFiveListItem numHeadings={numHeadings} />
       </Link>
       <div className="flex">
