@@ -4,17 +4,18 @@ import Sketch from "react-p5";
 let frameCount;
 let width;
 let height;
-let dots;
-let active;
+let cnv;
+let mouseX, mouseY;
+//red, orange, yellow, green, blue, purple, pink, black, white
+let active = [false, true, false, false, false, false, false, false, false];
+let buttons = [];
 
 export default (props) => {
   const setup = (p5, canvasParentRef) => {
-    dots = [];
-    active = true;
     frameCount = 0;
     let canvasExists = p5.canvas.id[p5.canvas.id.length - 1];
     if (canvasExists !== "1") {
-      p5.createCanvas(props.style.width, props.style.height).parent(
+      cnv = p5.createCanvas(props.style.width, props.style.height).parent(
         canvasParentRef
       );
     } else {
@@ -22,52 +23,73 @@ export default (props) => {
     }
     width = props.style.width;
     height = props.style.height;
-    console.log(width, height);
-    for (let i = 0; i < 100; i++) {
-      dots.push(new dot(50, 0.0025 * i, p5));
-    }
-    p5.frameRate(24);
-  };
-
-  const draw = (p5) => {
-    p5.clear();
-    p5.background('rgba(255,255,255, 0)');
-    p5.translate(width / 2, height / 2);
-    p5.strokeWeight(20);
-    dots.forEach((dot) => {
-      if (active) {
-        dot.update();
-      }
-      p5.point(dot.vec.x, dot.vec.y);
-      dot.colorDot(p5);
+    p5.frameRate(150);
+    cnv.mouseMoved((event) => {
+      mouseX = event.offsetX;
+      mouseY = event.offsetY;
     });
-    frameCount++;
+    cnv.mouseClicked((event) => {
+      let ind = currentColorIndex(active);
+      active[ind] = false;
+      if(ind === 8) {
+        active[0] = true;
+      } else {
+        active[ind + 1] = true;
+      }
+    });
+  };
+  
+  const draw = (p5) => {
+    
+    p5.background('rgba(255,255,255, 0)');
+    p5.strokeWeight(20);
+    p5.point(mouseX, mouseY);
+    p5.push();
+    p5.translate(width/2, height/2);
+    currentColor(currentColorIndex(active),p5);
+    p5.strokeWeight(50);
+    p5.point(mouseX - width/2, mouseY - height / 2);
+    p5.pop();
   };
 
   return <Sketch setup={setup} draw={draw} />;
 };
 
-class dot {
-  constructor(amp, v, p5) {
-    this.vel = p5.createVector(0, 0);
-    this.amp = amp;
-    this.angle = 0;
-    this.angV = v;
-    this.vec = p5.createVector(width / 2, height / 2);
-  }
 
-  update() {
-    let x = this.amp * Math.cos(this.angV * 0.65 * frameCount);
-    let y = this.amp * Math.sin(this.angV * 0.5 * frameCount);
-    //y = -abs(y);
-    this.vec.set(x, y);
+function currentColorIndex(activeArray) {
+  for (let i = 0; i < activeArray.length; i++) {
+    if (activeArray[i] === true) {
+      return i;
+    }
   }
+}
 
-  colorDot(p5) {
-    p5.stroke(
-      220 * Math.sin(this.angV * frameCount),
-      255 * Math.cos(this.angV * frameCount),
-      225 * Math.tan(this.angV * frameCount)
-    );
+function currentColor(index, p5) {
+  if(index === 0) {
+    p5.stroke(255, 0, 0);
+  }
+  if(index === 1) {
+    p5.stroke(255, 165, 0);
+  }
+  if(index === 2) {
+    p5.stroke(255, 255, 0);
+  }
+  if(index === 3) {
+    p5.stroke(0, 128, 0);
+  }
+  if(index === 4) {
+    p5.stroke(0, 0, 255);
+  }
+  if(index === 5) {
+    p5.stroke(128, 0, 128);
+  }
+  if(index === 6) {
+    p5.stroke(255, 192, 203);
+  }
+  if(index === 7) {
+    p5.stroke(0, 0, 0);
+  }
+  if(index === 8) {
+    p5.stroke(255, 255, 255);
   }
 }
