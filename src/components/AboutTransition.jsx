@@ -36,6 +36,10 @@ export default function AboutTransition() {
     let windowHeight = window.innerHeight;
     console.log(windowHeight);
 
+    function windowResized() {
+        windowWidth = window.innerWidth;
+        windowHeight = window.innerHeight;
+    }
 
     return (
         <div className="about-transition">

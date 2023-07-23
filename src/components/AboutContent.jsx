@@ -6,8 +6,7 @@ export default function AboutContent() {
     <div className="about-content">
       <div className="about-container">
         <div className="skills-container">
-            <div className="about-svg swirl-svg"></div>
-            <div className="about-svg pencil-svg"></div>
+            <div className="about-svg star-svg"></div>
           <h3 className="skills-header">Skills</h3>
           <div className="about-divider"></div>
           <div className="about-skills">
@@ -17,13 +16,19 @@ export default function AboutContent() {
               <li>JavaScript</li>
               <li>React</li>
               <li>Redux</li>
+              <li>Router</li>
               <li>GSAP</li>
+              <li>P5</li>
+              <li>Java</li>
+              <li>SQL</li>
+              <li>C</li>
             </ul>
           </div>
         </div>
         <div className="education-container">
           <h3 className="education-header">Education</h3>
           <div className="about-divider"></div>
+          <div className="about-svg pencil-svg"></div>
           <div className="about-education">
             <ul > <div className="mid-header">Virginia Tech</div>
                 <li>Graduation: May 2025</li>  
@@ -44,6 +49,8 @@ export default function AboutContent() {
 
         <div className="employeement-container">
           <h3 className="employeement-header">Employeement</h3>
+          <div className="about-svg work-svg"></div>
+
           <div className="about-divider"></div>
           <div className="about-employeement">
             <ul > <div className="mid-header">Rugged Organics</div>
