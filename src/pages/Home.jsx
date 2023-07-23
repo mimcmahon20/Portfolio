@@ -1,13 +1,18 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import About from "../components/About";
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 export default function Home() {
 
   return (
     <div>
-      <Hero />
-      <Projects />
+      <ReactLenis root>
+        <Hero />
+        <Projects />
+        <About />
+      </ReactLenis>
     </div>
   );
 }
