@@ -1,0 +1,55 @@
+.about-transition {
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.about {
+    background-color: #0a0a0a;
+}
+
+.about-intro {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    position: relative;
+    font-family: 'LEXEND', sans-serif;
+    font-weight: 500;
+}
+
+.about-name {
+    position: absolute;
+    left: 5%;
+    color: #f3f3f3;
+}
+
+.headshot {
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    aspect-ratio: 1/1;
+    width: 400px;
+    height: 400px;
+    background-image: url("../assets/headshot.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+@media screen and (max-width: 768px) {
+
+    
+    .about-intro {
+        height: 500px;
+        font-size: 1.9rem;
+        mix-blend-mode: difference;
+    }
+
+    .headshot {
+        width: 200px;
+        height: 200px;
+    }
+}

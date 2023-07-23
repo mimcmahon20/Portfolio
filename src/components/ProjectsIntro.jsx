@@ -20,7 +20,7 @@ export default function ProjectsIntro() {
         });
         timelineProjectsIntro.to(".projectsIntro-header", {
             duration: 1,
-            x: -1000,
+            x: -document.documentElement.clientWidth / 2 - 1,
             opacity: 1,
             ease: "power2.inOut",
             scrollTrigger: {
@@ -28,10 +28,10 @@ export default function ProjectsIntro() {
                 start: "top bottom",
                 end: "center center",
                 scrub: true,
-                markers: true,
+                markers: false,
             },
         });
-    }, ProjectsIntroRef);
+}, [ProjectsIntroRef]);
 
     return (
         <div className="projectsIntro">

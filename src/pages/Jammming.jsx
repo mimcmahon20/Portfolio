@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import Nav from "../components/Nav";
 import "../styles/Jammming.css";
-import { gsap } from "gsap";
  
 export default function Jammming() {
 

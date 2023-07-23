@@ -5,6 +5,7 @@
   --size-box-large: 50px;
   --size-box-small: 25px;
   overflow: hidden;
+  font-family: 'Lexend', sans-serif;
 }
 
 .list-item {

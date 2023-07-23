@@ -3,7 +3,6 @@ import Nav from "./Nav";
 import HeroText from "./HeroText";
 import HeroArrow from "./HeroArrow";
 import "../styles/Hero.css";
-import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -117,7 +116,8 @@ export default function Hero() {
       });
       tlMasterText.add(tlText);
     })
-  }, [words]);
+    
+  }, );
 
   function calcArrows(height) {
     let arrows = [];

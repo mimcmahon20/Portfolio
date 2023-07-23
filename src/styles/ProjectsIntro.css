@@ -6,6 +6,9 @@
     overflow: hidden;
 }
 
+
+
+
 .projectsIntro-header {
     width: 200%;
     display: flex;
@@ -15,4 +18,9 @@
     align-items: center;
     font-size: 4rem;
     opacity: 0;
+    color: #0a0a0a;
+    
+    font-family: 'Kanit', sans-serif;
+    font-family: 'SFPRODISPLAYREGULAR', sans-serif;
+    text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.5);
 }
