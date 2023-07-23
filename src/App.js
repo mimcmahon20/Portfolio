@@ -14,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="snake" element={<Snake />} />
         <Route path="jammming" element={<Jammming />} />
+        
       </Route>
     )
   );
