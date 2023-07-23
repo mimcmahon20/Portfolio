@@ -3,6 +3,8 @@ import {  Route, RouterProvider, createBrowserRouter, createRoutesFromElements }
 import Home from "./pages/Home";
 import Snake from "./pages/Snake";
 import Jammming from "./pages/Jammming";
+import Bits from "./pages/Bits";
+import PFive from "./pages/PFive";
 
 import "./styles/App.css";
 
@@ -14,7 +16,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="snake" element={<Snake />} />
         <Route path="jammming" element={<Jammming />} />
-        
+        <Route path="bits" element={<Bits />} />
+        <Route path="pfive" element={<PFive />} />
       </Route>
     )
   );
