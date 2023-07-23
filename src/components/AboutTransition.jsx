@@ -31,7 +31,7 @@ export default function AboutTransition() {
                 start: "center center",
                 end: "bottom center",
                 scrub: true,
-                markers: true,
+                markers: false,
             },
         });
     }, []);
