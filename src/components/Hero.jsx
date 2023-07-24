@@ -7,17 +7,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
-
 export default function Hero() {
   const HeroRef = useRef(null);
-
-
-
-  
 
   // useLayoutEffect(() => {
   //   const ctx = gsap.context((self) => {
@@ -28,6 +22,26 @@ export default function Hero() {
   //Animating the arrows
   useEffect(() => {
     let el = HeroRef.current;
+
+
+    gsap.to(".first-line", {
+      duration: 1,
+      opacity: 1,
+    })
+
+    gsap.to(".second-line",{
+      duration: 1,
+      opacity: 1,
+      delay: 1,
+    })
+
+    gsap.to(".arrow", {
+      opacity: 1,
+      duration: 1,
+      delay: 1,
+      stagger: 0.1,
+    });
+
     let timelineHero = gsap.timeline({
       scrollTrigger: {
         trigger: el,
@@ -39,10 +53,10 @@ export default function Hero() {
     });
     //arrows
     timelineHero.to(".arrow", {
-      y: -800,
+      y: -500,
       opacity: 0,
-      stagger: .1,
-      duration: .3,
+      stagger: 0.1,
+      duration: 0.3,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: el,
@@ -55,8 +69,7 @@ export default function Hero() {
     //animating the hero text
     timelineHero.to(".first-line", {
       duration: 1,
-      x: 0,
-      opacity: 0,
+      x: -1300,
       scrollTrigger: {
         trigger: el,
         start: "bottom+=100 bottom",
@@ -68,9 +81,7 @@ export default function Hero() {
 
     timelineHero.to(".second-line", {
       duration: 1,
-      x: 0,
-      opacity: 0,
-      scale: 2,
+      x: 1300,
       delay: 2,
       scrollTrigger: {
         trigger: el,
@@ -79,31 +90,42 @@ export default function Hero() {
         scrub: 1,
         markers: false,
       },
-    },);
+    });
 
-    timelineHero.to(".scroll-to-projects", {
-      duration: 1,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: el,
-        start: "bottom+=100 bottom",
-        end: "bottom center",
-        scrub: 1,
-        markers: false,
+    timelineHero.to(
+      ".scroll-to-projects",
+      {
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: el,
+          start: "bottom+=100 bottom",
+          end: "bottom center",
+          scrub: 1,
+          markers: false,
+        },
       },
-    }, ">3")
+      ">3"
+    );
   }, []);
 
   //animating the cursor
   useEffect(() => {
     gsap.to(".cursor", {
       opacity: 0,
-      ease: "power2.inOut",
+      ease: "linear",
       repeat: -1,
       duration: 0.5,
     });
   }, []);
-  const words = ["Developer", "Friend", "Engineer", "Designer", "Creator", "Programmer"];
+  const words = [
+    "Developer",
+    "Friend",
+    "Engineer",
+    "Designer",
+    "Creator",
+    "Programmer",
+  ];
   //animating the words
   useEffect(() => {
     let tlMasterText = gsap.timeline({ repeat: -1 });
@@ -115,9 +137,8 @@ export default function Hero() {
         ease: "power2.inOut",
       });
       tlMasterText.add(tlText);
-    })
-    
-  }, );
+    });
+  });
 
   function calcArrows(height) {
     let arrows = [];
@@ -136,7 +157,7 @@ export default function Hero() {
       <div className="arrows-container">
         {calcArrows(height)}
         <h3 className="scroll-to-projects">Scroll for projects</h3>
-        </div>
+      </div>
     </div>
   );
 }

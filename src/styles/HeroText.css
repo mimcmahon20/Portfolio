@@ -16,6 +16,12 @@
   z-index: 3;
 }
 
+.first-line,
+.second-line,
+.arrow {
+  opacity: 0;
+}
+
 .cursor {
   width: 10px;
 }

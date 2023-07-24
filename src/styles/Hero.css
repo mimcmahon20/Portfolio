@@ -1,6 +1,7 @@
 .hero {
     height: 100vh;
     background-color: #060606;
+    overflow-x: hidden;
 }
 
 .arrows-container {
