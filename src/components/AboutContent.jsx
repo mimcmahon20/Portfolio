@@ -40,9 +40,10 @@ export default function AboutContent() {
             <br/>
             <ul > <div className="mid-header">Codecademy</div>  
               <li>Frontend Engineering Career Course</li>
-              <li>Minors:</li>
-              <li style={{marginLeft: '20px'}}>Computer Science</li>
-              <li style={{marginLeft: '20px'}}>Human-Computer Interaction</li>
+              <li>Learned:</li>
+              <li style={{marginLeft: '20px'}}>Web development from HTML to React</li>
+              <li style={{marginLeft: '20px'}}>Interview skills</li>
+              <li style={{marginLeft: '20px'}}>Git</li>
             </ul>
           </div>
         </div>
@@ -63,8 +64,8 @@ export default function AboutContent() {
             <ul > <div className="mid-header">Scale A.I.</div>  
               <li>Code Analyser & Categorizer</li>
               <li>Summer '23</li>
-              <li style={{marginLeft: '20px'}}>Computer Science</li>
-              <li style={{marginLeft: '20px'}}>Human-Computer Interaction</li>
+              <li>Helped categorize and analyze code from several Large Language Models.</li>
+              <li>Rate: $25 / hour</li>
             </ul>
           </div>
         </div>
