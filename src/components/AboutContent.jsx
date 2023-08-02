@@ -56,8 +56,9 @@ export default function AboutContent() {
           <div className="about-employeement">
             <ul > <div className="mid-header">Rugged Organics</div>
                 <li>Website Development Team Lead</li>  
-                <li>Fall '22 - Current</li>  
+                <li>Fall '22 - Fall '23</li>  
               <li>Oversaw website transition between companies,<br/>4 interns, website front & backend in Wordpress, <br/> and generated weekly & monthly goals & reports.</li>
+              <li>Promoted from Web Dev Intern to Development Team Lead in January '23.</li>
               <li>Rate: Unpaid</li>
             </ul>
             <br/>
