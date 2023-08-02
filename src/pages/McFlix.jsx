@@ -10,6 +10,7 @@ import ProjectDescription from "../components/ProjectDescription";
 import ProjectFramework from "../components/ProjectFramework";
 import ProjectLinks from "../components/ProjectLinks";
 import BackButton from "../components/BackButton";
+import mcflixscreenshot from "../media/mcflixscreenshot.png";
 
 import gsap from "gsap";
 
@@ -168,8 +169,8 @@ export default function McFlix() {
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
-              <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} />
-              <ProjectMedia url={"/Videos/djvideo.mp4"} type={"video"} />
+              <ProjectMedia url={"/Videos/mcflixvideo.mp4"} type={"video"} />
+              <ProjectMedia url={mcflixscreenshot} type={"image"} />
             </div>
             <div className="carousel-buttons">
               <button className="left-carousel carousel-button" onClick={slideLeft}></button>
