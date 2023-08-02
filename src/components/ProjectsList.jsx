@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/ProjectsList.css";
+import McFlixListItem from "./McFlixListItem";
 import SnakeListItem from "./SnakeListItem";
 import JammmingListItem from "./JammmingListItem";
 import BitsListItem from "./BitsListItem";
@@ -70,6 +71,12 @@ export default function ProjectsList() {
 
   return (
     <div className="projects-list" ref={projListRef}>
+      <Link to="/McFlix">
+        <McFlixListItem numHeadings={numHeadings} />
+      </Link>
+      <div className="flex" style={{ height: "100px" }}>
+        <div className="projects-divider"></div>
+      </div>
       <Link to="/Snake">
         <SnakeListItem numHeadings={numHeadings}/>
       </Link>

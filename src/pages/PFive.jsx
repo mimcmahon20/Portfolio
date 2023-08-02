@@ -4,7 +4,6 @@ import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css"
-import PFiveListItem from "../components/PFiveListItem";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
@@ -14,17 +13,7 @@ import BackButton from "../components/BackButton";
 import { gsap } from "gsap";
 
 export default function PFive() {
-  function numHeadings(num, name) {
-    let headings = [];
-    for (let i = 0; i < num; i++) {
-      headings.push(
-        <h1 key={i * 132} className="projects-heading">
-          {name}
-        </h1>
-      );
-    }
-    return headings;
-  }
+  
 
   function generateProject() {
     let titleSection = (<div className="project-section">
@@ -171,7 +160,7 @@ export default function PFive() {
       <Nav />
         <BackButton />
       <TransitionToProject>
-        <PFiveListItem numHeadings={numHeadings} />
+        {/* <PFiveListItem numHeadings={numHeadings} /> */}
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>

@@ -6,6 +6,7 @@ import Jammming from "./pages/Jammming";
 import Bits from "./pages/Bits";
 import PFive from "./pages/PFive";
 import Portfolio from "./pages/Portfolio";
+import McFlix from "./pages/McFlix";
 
 import "./styles/App.css";
 
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="bits" element={<Bits />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="pfive" element={<PFive />} />
+        <Route path="mcflix" element={<McFlix />} />
       </Route>
     )
   );
