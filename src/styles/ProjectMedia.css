@@ -1,16 +1,14 @@
 .project-media {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 65%;
+    width: 100%;
     aspect-ratio: preserve;
     margin-bottom: 2rem;
 }
 
 .project-media img,
 .project-media video {
-    width: 100%;
+    width: var(--width-media);
     height: auto;
     aspect-ratio: preserve;
     margin-bottom: 1rem;

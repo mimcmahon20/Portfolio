@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Nav from "../components/Nav";
 import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
@@ -11,6 +11,8 @@ import ProjectDescription from "../components/ProjectDescription";
 import ProjectFramework from "../components/ProjectFramework";
 import ProjectLinks from "../components/ProjectLinks";
 import BackButton from "../components/BackButton";
+import porfolioscreenshot from "../media/portfolioscreenshot.png";
+import gsap from "gsap";
 
 export default function Portfolio() {
   function numHeadings(num, name) {
@@ -38,7 +40,7 @@ export default function Portfolio() {
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
     <ProjectFramework languages={["HTML", "CSS", "Javascript", "Git"]} />
-    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
+    <ProjectLinks className="outgoing-links" github={"https://github.com/mimcmahon20/My-Portfolio"} live={"www.maguiremcmahon.com"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">
@@ -76,14 +78,100 @@ export default function Portfolio() {
    window.scrollTo(0, thirtyVh);
 
   }, []);
+
+  //GSAP CAROUSEL
+  let carousel = useRef(null);
+  let xPos = 0;
+  let amountMedia = 2;
+  let mediaWidth;
+  if(window.innerWidth < 1000) {
+    mediaWidth = 500;
+  } else {
+    mediaWidth = 1000;
+  }
+
+  window.addEventListener('resize', () => {
+    if(window.innerWidth < 1000) {
+      mediaWidth = 500;
+    } else {
+      mediaWidth = 1000;
+    }
+  })
+
+  //gsap helper functions
+
+  useEffect(() => {
+    window.addEventListener('error', e => {
+      console.log(e);
+        if (e.message === 'ResizeObserver loop completed with undelivered notifications.') {
+            const resizeObserverErrDiv = document.getElementById(
+                'webpack-dev-server-client-overlay-div'
+            );
+            const resizeObserverErr = document.getElementById(
+                'webpack-dev-server-client-overlay'
+            );
+            if (resizeObserverErr) {
+                resizeObserverErr.setAttribute('style', 'display: none');
+            }
+            if (resizeObserverErrDiv) {
+                resizeObserverErrDiv.setAttribute('style', 'display: none');
+            }
+        }
+    });
+}, []);
+
+  const slideRight = () => {
+    if(xPos < -mediaWidth * (amountMedia - 2)) {
+      gsap.to(carousel, {
+        x: 0,
+        duration: 0.4,
+        ease: "power4.out",
+        });
+      xPos = 0;
+    } else {
+      gsap.to(carousel, {
+        x: "-=" + mediaWidth,
+        duration: 0.4,
+        ease: "power4.out",
+      });
+      xPos -= mediaWidth;
+    }
+  }
+
+  const slideLeft = () => {
+    if(xPos > -mediaWidth) {
+      gsap.to(carousel, {
+        x: -mediaWidth * (amountMedia - 1),
+        duration: 0.4,
+        ease: "power4.out",
+        });
+      xPos = -mediaWidth * (amountMedia - 1);
+    } else {
+      gsap.to(carousel, {
+        x: "+=" + mediaWidth,
+        duration: 0.4,
+        ease: "power4.out",
+      });
+      xPos += mediaWidth;
+    }
+  }
   return (
     <div style={{backgroundColor: '#0a0a0a', position: 'relative'}}>
       <Nav />
         <BackButton />
       <TransitionToProject>
         <OldPortfolio numHeadings={numHeadings} />
-        <div className="media-carousel">
-          <ProjectMedia url={""} type={"video"} />
+        <div className="center-carousel">
+          <div className="carousel-container">
+            <div className="media-carousel" ref={(el) => (carousel = el)}>
+              <ProjectMedia url={"/Videos/portfoliovideo.mp4"} type={"video"} />
+              <ProjectMedia url={porfolioscreenshot} type={"image"} />
+            </div>
+            <div className="carousel-buttons">
+              <button className="left-carousel carousel-button" onClick={slideLeft}></button>
+              <button className="right-carousel carousel-button" onClick={slideRight}></button>
+            </div>
+          </div>
         </div>
         <div className="project-layout">
           {generateProject()}
