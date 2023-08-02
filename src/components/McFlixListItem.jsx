@@ -45,8 +45,8 @@ export default function McFlixListItem(props) {
   }, []);
 
   return (
-    <div className="list-item mcflixList">
-      <div className="recs">
+    <div className="list-item mcflixListitem">
+        <div className="recs">
         <div className="first-rec-cover">
           <div className="rectangle first-rec rectanglestraight"></div>
         </div>
@@ -60,6 +60,7 @@ export default function McFlixListItem(props) {
           <div className="rectangle fourth-rec rectanglestraight"></div>
         </div>
       </div>
+      
       {/* <div className="centeredM">M</div> */}
       <div className="heading-container mcflix">
         {numHeadings(8, "McFlix ")}

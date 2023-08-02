@@ -115,7 +115,7 @@ a {
 .bitsList:hover > .bits-svgs,
 .oldPortfolio:hover > .portfolio-svgs,
 .pFive:hover > .pFive-svgs,
-.mcflix:hover > .mcflix-svgs {
+.mcflixListitem:hover > .mcflix-svgs {
   opacity: 1;
   scale: 1;
 }
@@ -155,8 +155,10 @@ a {
 .recs {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 45%;
 }
+
+
 
 .first-rec-cover {
   overflow: hidden;
