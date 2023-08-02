@@ -36,7 +36,7 @@ export default function McFlix() {
         />
         <ProjectLinks
           className="outgoing-links"
-          github={"https://github.com/mimcmahon20/snake"}
+          github={"https://github.com/mimcmahon20/McFlix"}
           live={"https://mimcmahon20.github.io/snake/"}
         />
       </div>

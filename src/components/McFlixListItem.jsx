@@ -16,29 +16,33 @@ export default function McFlixListItem(props) {
       timelineMcflix.clear();
       console.log(rectangleStraight);
       timelineMcflix.to(rectangleStraight, {
-        duration: .4,
+        duration: 0.4,
         y: -200,
-        stagger: .6,
+        stagger: 0.6,
         ease: "power2.out",
       });
-      timelineMcflix.to(rectangleAngled, {
-        delay: .4,
-        duration: .4,
-        y: -141,
-        stagger: .2,
-        ease: "power2.out",
-      }, "<");
+      timelineMcflix.to(
+        rectangleAngled,
+        {
+          delay: 0.4,
+          duration: 0.4,
+          y: -141,
+          stagger: 0.2,
+          ease: "power2.out",
+        },
+        "<"
+      );
     });
     mcflix.addEventListener("mouseleave", () => {
       timelineMcflix.clear();
       timelineMcflix.to(rectangleAngled, {
-        duration: .4,
-        y: 0,
+        duration: 0.4,
+        y: 1,
         ease: "power2.out",
       });
       timelineMcflix.to(rectangleStraight, {
-        duration: .4,
-        y: 0,
+        duration: 0.4,
+        y: 1,
         ease: "power2.out",
       });
     });
@@ -46,7 +50,7 @@ export default function McFlixListItem(props) {
 
   return (
     <div className="list-item mcflixListitem">
-        <div className="recs">
+      <div className="recs">
         <div className="first-rec-cover">
           <div className="rectangle first-rec rectanglestraight"></div>
         </div>
@@ -54,13 +58,15 @@ export default function McFlixListItem(props) {
           <div className="rectangle second-rec rectangleangled"></div>
         </div>
         <div className="third-rec-cover">
-            <div className="rectangle third-rec rectangleangled"></div>
+          <div className="rectangle third-rec rectangleangled"></div>
         </div>
         <div className="fourth-rec-cover">
           <div className="rectangle fourth-rec rectanglestraight"></div>
         </div>
       </div>
+
       
+
       {/* <div className="centeredM">M</div> */}
       <div className="heading-container mcflix">
         {numHeadings(8, "McFlix ")}
