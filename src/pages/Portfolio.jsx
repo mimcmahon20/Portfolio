@@ -4,7 +4,6 @@ import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css"
-import OldPortfolio from "../components/OldPortfolio";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
@@ -15,17 +14,7 @@ import porfolioscreenshot from "../media/portfolioscreenshot.png";
 import gsap from "gsap";
 
 export default function Portfolio() {
-  function numHeadings(num, name) {
-    let headings = [];
-    for (let i = 0; i < num; i++) {
-      headings.push(
-        <h1 key={i * 132} className="projects-heading">
-          {name}
-        </h1>
-      );
-    }
-    return headings;
-  }
+  
 
   function generateProject() {
     let titleSection = (<div className="project-section">
@@ -160,7 +149,7 @@ export default function Portfolio() {
       <Nav />
         <BackButton />
       <TransitionToProject>
-        <OldPortfolio numHeadings={numHeadings} />
+        {/* <OldPortfolio numHeadings={numHeadings} /> */}
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>

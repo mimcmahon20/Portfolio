@@ -79,7 +79,7 @@ export default function JammmingListItem(props) {
           <div className="spotify-svg jammming-left"></div>
           <div className="spotify-svg jammming-right"></div>
         </div>
-        {numHeadings(11, "jammming")}
+        {numHeadings(7, "jammming ")}
         <div className="projects-subheading svgs jammming-svgs">
           <div className="react-svg language-svg" alt="react"></div>
           <div className="node-svg language-svg" alt="node"></div>

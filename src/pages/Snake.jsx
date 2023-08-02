@@ -4,7 +4,6 @@ import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css";
-import SnakeListItem from "../components/SnakeListItem";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
@@ -15,20 +14,6 @@ import BackButton from "../components/BackButton";
 import gsap from "gsap";
 
 export default function Snake() {
-
-
-  //HELPER FUNCTIONS
-  function numHeadings(num, name) {
-    let headings = [];
-    for (let i = 0; i < num; i++) {
-      headings.push(
-        <h1 key={i * 132} className="projects-heading">
-          {name}
-        </h1>
-      );
-    }
-    return headings;
-  }
 
   function generateProject() {
     let titleSection = (
@@ -97,7 +82,7 @@ export default function Snake() {
   //GSAP CAROUSEL
   let carousel = useRef(null);
   let xPos = 0;
-  let amountMedia = 3;
+  let amountMedia = 2;
   let mediaWidth;
   if(window.innerWidth < 1000) {
     mediaWidth = 500;
@@ -179,13 +164,12 @@ export default function Snake() {
       <Nav />
       <BackButton />
       <TransitionToProject>
-        <SnakeListItem numHeadings={numHeadings} />
+        {/* <SnakeListItem numHeadings={numHeadings} /> */}
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
               <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} />
-              <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} />
-              <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} />
+              <ProjectMedia url={"/Videos/djvideo.mp4"} type={"video"} />
             </div>
             <div className="carousel-buttons">
               <button className="left-carousel carousel-button" onClick={slideLeft}></button>

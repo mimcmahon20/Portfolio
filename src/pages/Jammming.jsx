@@ -4,7 +4,6 @@ import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css"
-import JammmingListItem from "../components/JammmingListItem";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
@@ -16,18 +15,7 @@ import jammmingscreenshot from "../media/jammmingscreenshot.png";
 import gsap from "gsap";
 
 export default function Jammming() {
-  function numHeadings(num, name) {
-    let headings = [];
-    for (let i = 0; i < num; i++) {
-      headings.push(
-        <h1 key={i * 132} className="projects-heading">
-          {name}
-        </h1>
-      );
-    }
-    return headings;
-  }
-
+  
   function generateProject() {
     let titleSection = (<div className="project-section">
     <ProjectTitle title={"Jammming"} />
@@ -166,7 +154,7 @@ export default function Jammming() {
       <Nav />
         <BackButton />
       <TransitionToProject>
-        <JammmingListItem numHeadings={numHeadings} />
+        {/* <JammmingListItem numHeadings={numHeadings} /> */}
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
