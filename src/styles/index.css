@@ -1,3 +1,13 @@
+* {
+  --width-media: 1000px;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    --width-media: 500px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const animations = {
-  initial: { y: 2000, opacity: 0  },
-  animate: { y: 0, opacity: 1 },
+  initial: { y: 0, opacity: 0, scale: 0  },
+  animate: { y: 0, opacity: 1, scale: 1 },
   exit: { opacity: 0 },
   transitionEnd: {
     display: "none",
