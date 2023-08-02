@@ -11,6 +11,7 @@ import ProjectDescription from "../components/ProjectDescription";
 import ProjectFramework from "../components/ProjectFramework";
 import ProjectLinks from "../components/ProjectLinks";
 import BackButton from "../components/BackButton";
+import jammmingscreenshot from "../media/jammmingscreenshot.png";
 
 import gsap from "gsap";
 
@@ -83,7 +84,7 @@ export default function Jammming() {
   //GSAP CAROUSEL
   let carousel = useRef(null);
   let xPos = 0;
-  let amountMedia = 3;
+  let amountMedia = 2;
   let mediaWidth;
   if(window.innerWidth < 1000) {
     mediaWidth = 500;
@@ -170,6 +171,7 @@ export default function Jammming() {
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
               <ProjectMedia url={"/Videos/jammmingvideo.mp4"} type={"video"} />
+              <ProjectMedia url={jammmingscreenshot} type={"image"} />
             </div>
             <div className="carousel-buttons">
               <button className="left-carousel carousel-button" onClick={slideLeft}></button>
