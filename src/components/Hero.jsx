@@ -38,8 +38,8 @@ export default function Hero() {
     gsap.to(".arrow", {
       opacity: 1,
       duration: 1,
-      delay: 1,
-      stagger: 0.1,
+      delay: 2,
+      stagger: 0.24,
     });
 
     let timelineHero = gsap.timeline({

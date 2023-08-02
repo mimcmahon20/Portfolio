@@ -97,6 +97,7 @@ export default function Snake() {
   //GSAP CAROUSEL
   let carousel = useRef(null);
   let xPos = 0;
+  let amountMedia = 3;
   let mediaWidth;
   if(window.innerWidth < 1000) {
     mediaWidth = 500;
@@ -113,7 +114,6 @@ export default function Snake() {
   })
   
 
-  let amountMedia = 3;
 
   //gsap helper functions
 
