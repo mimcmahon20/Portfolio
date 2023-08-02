@@ -45,7 +45,7 @@ export default function PFive() {
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
     <ProjectFramework languages={["Javascript", "P5"]} />
-    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
+    <ProjectLinks className="outgoing-links" github={"https://github.com/mimcmahon20/Ecosystem"} live={"https://mimcmahon20.github.io/Ecosystem/"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">

@@ -42,7 +42,7 @@ export default function Bits() {
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
     <ProjectFramework languages={["React", "Git"]} />
-    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
+    <ProjectLinks className="outgoing-links" github={"https://github.com/taylor-b-02/bits-n-bytes"} live={"https://github.com/taylor-b-02/bits-n-bytes"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">

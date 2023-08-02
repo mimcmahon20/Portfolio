@@ -40,7 +40,7 @@ export default function Portfolio() {
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
     <ProjectFramework languages={["HTML", "CSS", "Javascript", "Git"]} />
-    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
+    <ProjectLinks className="outgoing-links" github={"https://github.com/mimcmahon20/My-Portfolio"} live={"www.maguiremcmahon.com"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">

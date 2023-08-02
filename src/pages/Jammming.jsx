@@ -41,7 +41,7 @@ export default function Jammming() {
     let frameworkSection = (<div className="project-section framework-section">
     <h2>Framework</h2>
     <ProjectFramework languages={["React"]} />
-    <ProjectLinks className="outgoing-links" github={"google.com"} live={"google.com"}/>
+    <ProjectLinks className="outgoing-links" github={"https://github.com/mimcmahon20/Jammming-Spotify-Playlists"} live={"https://64b6e8a50d37e00008c83a2d--zippy-churros-8887e2.netlify.app/"}/>
   </div>);
 
     let descriptionSection = (<div className="project-section">
