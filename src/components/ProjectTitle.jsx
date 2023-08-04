@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ProjectTitle.css";
 
 export default function ProjectTitle(props) {
     const { title } = props;

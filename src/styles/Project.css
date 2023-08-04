@@ -65,9 +65,15 @@
   margin-bottom: 2rem;
   margin-top: 2rem;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: var(--width-media);
   overflow: hidden;
+}
+
+@media  screen and (max-height: 768px) {
+  .carousel-container {
+    height: 120vh;
+  }
 }
 
 .media-carousel {
@@ -96,7 +102,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  background-color: #ffffff;
+  background-color: var(--cta);
   border-radius: 50%;
   margin: 10px;
   cursor: pointer;
@@ -105,6 +111,7 @@
 
 .carousel-button:hover {
   border-radius: 15%;
+  background-color: var(--ctahover);
 }
 
 .left-carousel {
@@ -120,15 +127,20 @@
   flex-direction: column;
   width: 500px;
   margin: 1px 0;
-  background-color: #e3efe0;
+  background-color: rgb(21, 29, 36);
+  color: rgb(235, 229, 229);
   border-radius: 10px;
   border: 1px solid white;
   min-height: 300px;
 }
 
+
+
 .project-section > h2 {
   font-size: 1.5rem;
   text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid white;
 }
 
 .project-section > .project-title {
@@ -142,6 +154,7 @@
   text-indent: 35px;
   font-family: "SFPRODISPLAYREGULAR", sans-serif;
   margin: 10px;
+  line-height: 1.25;
 }
 
 .framework-section {
@@ -166,12 +179,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: rgb(71, 63, 71);
+  background-color: var(--cta);
   position: relative;
 }
 
 .link-svg:hover {
   border-radius: 15%;
+  background-color: var(--ctahover);
 }
 
 .github-svg {
@@ -186,8 +200,8 @@
     left: 0;
     width: 100%;
     height: 60%;
-    border-radius: 25%;
-    background-color: rgb(71, 63, 71);
+    border-radius: 5px;
+    background-color: var(--ctahover);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,8 +229,8 @@
     left: 0;
     width: 100%;
     height: 60%;
-    border-radius: 25%;
-    background-color: rgb(71, 63, 71);
+    border-radius: 5px;
+    background-color: var(--ctahover);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,9 +260,18 @@
   .project-layout {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
   .project-section {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .live-svg::after, .github-svg::after {
+    top: -100%;
+    opacity: 1;
   }
 }
