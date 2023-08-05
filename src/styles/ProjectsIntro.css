@@ -4,6 +4,26 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-boundary {
+    width: 100%;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.left-boundary {
+    margin-left: 10%;
+}
+
+.right-boundary {
+    margin-right: 10%;
 }
 
 
@@ -18,7 +38,8 @@
     opacity: 1;
     color: #0a0a0a; 
     font-family: 'Kanit', sans-serif;
-    font-family: 'SFPRODISPLAYREGULAR', sans-serif;
+    font-weight: 200;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
