@@ -6,7 +6,7 @@
     font-family: 'SFPRODISPLAYREGULAR', sans-serif;
     color: #0a0a0a;
     flex-wrap: wrap;
-    background-color: #f3f3f3;
+    background-color: #0a0a0a;
 }
 
 .about-divider {
@@ -21,10 +21,12 @@
 .education-container,
 .employeement-container {
     border: 2px solid rgb(19, 19, 19);
-    width: 590px;
+    width: clamp(30vw, 300px, 590px);
     margin: 20px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     background-color: rgb(255, 255, 255);
     position: relative;
 }
@@ -69,7 +71,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 48px;
     border-bottom-left-radius: 10px;
 }
 
