@@ -13,100 +13,36 @@ gsap.registerPlugin(TextPlugin);
 export default function Hero() {
   const HeroRef = useRef(null);
 
-  // useLayoutEffect(() => {
-  //   const ctx = gsap.context((self) => {
-  //       self.HeroRef = HeroRef;
-  //   })
-  // }, HeroRef);
-
-  //Animating the arrows
+  //animating the arrows 
   useEffect(() => {
-    let el = HeroRef.current;
+    const arrows = HeroRef.current.querySelectorAll(".arrow");
+    const firstLine = HeroRef.current.querySelector(".first-line");
+    const secondLine = HeroRef.current.querySelector(".second-line");
 
+    let HeroTimeline = gsap.timeline({});
 
-    gsap.to(".first-line", {
-      duration: 1,
-      opacity: 1,
-    })
+    if(window.scrollY < 100) {
+      //animating lines of text
+      HeroTimeline.fromTo(firstLine, { scale: 0 }, { scale: 1, duration: 1, delay: 0.5});
+      HeroTimeline.fromTo(secondLine, { scale: 0 }, { scale: 1, duration: 1, delay: 0.5}, "<");
+      
+      //animating arrows
+      HeroTimeline.fromTo(arrows, { scale: 0, y: -50}, { delay: 0.5, scale: 1, y: 0, stagger: 0.1, duration: .5});
+  
+      //animating small scroll to projects in bottom right
+      HeroTimeline.fromTo(".scroll-to-projects", { opacity: 0 }, { opacity: 1, duration: 1, delay: 1.5 }, "-=2");
 
-    gsap.to(".second-line",{
-      duration: 1,
-      opacity: 1,
-      delay: 1,
-    })
-
-    gsap.to(".arrow", {
-      opacity: 1,
-      duration: 1,
-      delay: 2,
-      stagger: 0.24,
-    });
-
-    let timelineHero = gsap.timeline({
-      scrollTrigger: {
-        trigger: el,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-        markers: false,
-      },
-    });
-    //arrows
-    timelineHero.to(".arrow", {
-      y: -500,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.3,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: el,
-        start: "bottom bottom",
+      HeroTimeline.fromTo(arrows, {y: 0}, { y: -500, duration: 1, stagger: .1, scrollTrigger: {
+        trigger: ".hero",
+        start: "50% 50%",
         end: "bottom 50%",
         scrub: true,
-        markers: false,
-      },
-    });
-    //animating the hero text
-    timelineHero.to(".first-line", {
-      duration: 1,
-      x: -1300,
-      scrollTrigger: {
-        trigger: el,
-        start: "bottom+=100 bottom",
-        end: "bottom center",
-        scrub: 1,
-        markers: false,
-      },
-    });
+        markers: true,
+      }})
+    }
 
-    timelineHero.to(".second-line", {
-      duration: 1,
-      x: 1300,
-      delay: 2,
-      scrollTrigger: {
-        trigger: el,
-        start: "bottom+=100 bottom",
-        end: "bottom center",
-        scrub: 1,
-        markers: false,
-      },
-    });
 
-    timelineHero.to(
-      ".scroll-to-projects",
-      {
-        duration: 1,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: el,
-          start: "bottom+=100 bottom",
-          end: "bottom center",
-          scrub: 1,
-          markers: false,
-        },
-      },
-      ">3"
-    );
+
   }, []);
 
   //animating the cursor
@@ -118,6 +54,8 @@ export default function Hero() {
       duration: 0.5,
     });
   }, []);
+
+  //animating the words
   const words = [
     "Developer",
     "Friend",
@@ -126,7 +64,6 @@ export default function Hero() {
     "Creator",
     "Programmer",
   ];
-  //animating the words
   useEffect(() => {
     let tlMasterText = gsap.timeline({ repeat: -1 });
     words.forEach((word) => {
@@ -148,7 +85,11 @@ export default function Hero() {
     return arrows;
   }
 
-  let height = window.innerHeight / 2;
+  let height = window.innerHeight / 1.5;
+
+  window.addEventListener("resize", () => {
+    height = window.innerHeight / 1.5;
+  });
 
   return (
     <div ref={HeroRef} className="hero">

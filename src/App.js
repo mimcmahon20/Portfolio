@@ -50,20 +50,5 @@ export default function App() {
     <RouterProvider router={router}>
 
     </RouterProvider>
-
-
-    // <BrowserRouter>
-    //   <ReactLenis root>
-    //   <Routes>
-    //   {/* <Route path="/" element={<Nav />}> */}
-    //       <Route path="/" index element={<Home />} />
-    //       <Route path="snake" element={<Snake />} />
-    //       <Route path="jammming" element={<Jammming />} />
-          
-    //     {/* <Route path="/" element={<Home />}></Route>
-    //     <Route path="/Snake" element={<Snake />} /> */}
-    //   </Routes>
-    //   </ReactLenis>
-    // </BrowserRouter>
   );
 }

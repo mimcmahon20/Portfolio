@@ -19,7 +19,7 @@
 .first-line,
 .second-line,
 .arrow {
-  opacity: 0;
+  opacity: 1;
 }
 
 .cursor {
