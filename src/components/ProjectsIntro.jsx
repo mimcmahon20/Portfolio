@@ -35,7 +35,10 @@ export default function ProjectsIntro() {
 
     return (
         <div className="projectsIntro">
+            <div className="intro-boundary left-boundary"></div>
             <h2 className="projectsIntro-header">Work & Projects</h2>
+            <div className="intro-boundary right-boundary"></div>
+
         </div>
       );
 }
