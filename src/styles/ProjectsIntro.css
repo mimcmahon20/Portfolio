@@ -49,4 +49,12 @@
     .intro-boundary {
         width: 80%;
     }
+
+    .left-boundary {
+        margin-left: 0%;
+    }
+
+    .right-boundary {
+        margin-right: 0%;
+    }
 }

@@ -86,10 +86,10 @@ export default function Hero() {
     return arrows;
   }
 
-  let height = window.innerHeight / 1.85;
+  let height = window.innerHeight / 2;
 
   window.addEventListener("resize", () => {
-    height = window.innerHeight / 1.85;
+    height = window.innerHeight / 2;
   });
 
   return (
