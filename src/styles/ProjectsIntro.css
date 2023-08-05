@@ -44,6 +44,9 @@
 
 @media screen and (max-width: 768px) {
     .projectsIntro-header {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .intro-boundary {
+        width: 80%;
     }
 }

@@ -19,7 +19,7 @@
 .first-line,
 .second-line,
 .arrow {
-  opacity: 0;
+  opacity: 1;
 }
 
 .cursor {
@@ -27,20 +27,12 @@
 }
 
 .words {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.5) 0%,
-    rgba(240, 225, 225, 0.904) 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    rgba(0, 217, 255, 0.5) 0%,
-    rgba(240, 225, 225, 0.904) 100%
-  );
+  background-clip: text;
+  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 @media screen and (max-width: 768px) {
   .heroText {
