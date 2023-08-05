@@ -1,5 +1,7 @@
 * {
   --width-media: 1000px;
+  --cta: #6ca86c;
+  --ctahover: #4f7e4f;
 }
 
 @media screen and (max-width: 1000px) {

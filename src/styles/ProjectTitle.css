@@ -1,0 +1,10 @@
+.project-title > h1 {
+    background: rgb(181,214,189);
+    background: -moz-linear-gradient(270deg, rgb(118, 151, 126) 0%, rgba(132,193,128,0.55) 100%);
+    background: -webkit-linear-gradient(270deg, rgb(118, 151, 126) 0%, rgba(132,193,128,0.55) 100%);
+    background: linear-gradient(270deg, rgb(118, 151, 126) 0%, rgba(132,193,128,0.55) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b5d6bd",endColorstr="#84c180",GradientType=1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
