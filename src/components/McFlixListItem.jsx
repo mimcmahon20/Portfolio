@@ -14,7 +14,6 @@ export default function McFlixListItem(props) {
 
     mcflix.addEventListener("mouseenter", () => {
       timelineMcflix.clear();
-      console.log(rectangleStraight);
       timelineMcflix.to(rectangleStraight, {
         duration: 0.4,
         y: -200,
