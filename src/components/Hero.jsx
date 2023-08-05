@@ -37,7 +37,7 @@ export default function Hero() {
         start: "50% 50%",
         end: "bottom 50%",
         scrub: true,
-        markers: true,
+        markers: false,
       }})
     }
 
@@ -58,8 +58,8 @@ export default function Hero() {
   //animating the words
   const words = [
     "Developer",
-    "Friend",
     "Engineer",
+    "Friend",
     "Designer",
     "Creator",
     "Programmer",
@@ -72,6 +72,7 @@ export default function Hero() {
         duration: 1,
         text: word,
         ease: "power2.inOut",
+        backgroundImage: "linear-gradient(150deg, rgba(0,255,21,1) 25%, rgba(0,255,244,1) 75%)",
       });
       tlMasterText.add(tlText);
     });
@@ -85,10 +86,10 @@ export default function Hero() {
     return arrows;
   }
 
-  let height = window.innerHeight / 1.5;
+  let height = window.innerHeight / 1.85;
 
   window.addEventListener("resize", () => {
-    height = window.innerHeight / 1.5;
+    height = window.innerHeight / 1.85;
   });
 
   return (
