@@ -72,9 +72,12 @@ export default function Hero() {
         duration: 1,
         text: word,
         ease: "power2.inOut",
-        backgroundImage: "linear-gradient(150deg, rgba(0,255,21,1) 25%, rgba(0,255,244,1) 75%)",
+        
       });
+      let tlTextColor = gsap.timeline({ repeat: -1, yoyo: true });
+      tlTextColor.fromTo(".words", { backgroundImage: "linear-gradient(140deg, rgba(218,54,54,1) 25%, rgba(70,205,69,1) 50%, rgba(59,146,185,1) 75%)"}, { backgroundImage: "linear-gradient(220deg, rgba(59,146,185,1) 25%, rgba(218,54,54,.75) 50%, rgba(70,205,69,.75) 75%)", duration: 2.5, ease: "power2.inOut" })
       tlMasterText.add(tlText);
+
     });
   });
 
