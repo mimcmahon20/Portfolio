@@ -5,7 +5,7 @@
 }
 
 .about {
-    background-color: #0a0a0a;
+    
 }
 
 .about-intro {
@@ -20,6 +20,7 @@
     font-family: 'LEXEND', sans-serif;
     font-weight: 500;
     overflow: hidden;
+    
 }
 
 .about-name {
@@ -27,6 +28,8 @@
     left: 5%;
     color: #f3f3f3;
     z-index: 2;
+    color: #0a0a0a;
+
 }
 
 .headshot {

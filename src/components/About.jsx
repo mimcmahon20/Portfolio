@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "../styles/About.css";
 import "../fonts/fonts.css";
 import AboutContent from "./AboutContent";
-import AboutTransition from "./AboutTransition";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/all";
@@ -56,7 +56,7 @@ export default function About() {
 
   return (
     <div className="about">
-        <AboutTransition/>
+        {/* <AboutTransition/> */}
       <div className="about-intro">
         <h1 className="about-name" alt="Meet Maguire"> </h1>
         <div className="headshot"></div>

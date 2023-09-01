@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "../styles/Nav.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Logo from "./Logo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +30,7 @@ gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
 
     return (
         <div className="nav">
-            <div className="logo skewElem"></div>
+            <Logo></Logo>
             {/* <div className="nav-elements">
             <a className="navLink" href='Projects'>Projects</a>
             <a className="navLink" href='Resume'>Resume</a>
