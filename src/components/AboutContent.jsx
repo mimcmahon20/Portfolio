@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/AboutContent.css";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useRef } from "react";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutContent() {
+//   const aboutContentRef = useRef(null);
+
+//   useEffect(() => {
+//     let el = aboutContentRef.current;
+
+//     let timelineAboutContent = gsap.timeline({});
+
+//     gsap.set(".about-container-ref", { x: 100, opacity: 0 })
+
+//     timelineAboutContent.to(".about-container-ref", {
+//         opacity: 1,
+//         x: 0,
+//         duration: 1,
+//         ease: "power4.in",
+//         stagger: 0.2,
+//         scrollTrigger: {
+//             trigger: ".about-container-ref",
+//             start: "center bottom",
+//             end: "center center",
+//             scrub: true,
+//             markers: true,
+//         },
+//     });
+// }, [aboutContentRef]);
+
   return (
     <div className="about-content">
       <div className="about-container">
-        <div className="skills-container">
+        <div className="skills-container about-container-ref">
             <div className="about-svg star-svg"></div>
           <h3 className="skills-header">Skills</h3>
           <div className="about-divider"></div>
@@ -25,7 +55,7 @@ export default function AboutContent() {
             </ul>
           </div>
         </div>
-        <div className="education-container">
+        <div className="education-container about-container-ref">
           <h3 className="education-header">Education</h3>
           <div className="about-divider"></div>
           <div className="about-svg pencil-svg"></div>
@@ -47,7 +77,7 @@ export default function AboutContent() {
           </div>
         </div>
 
-        <div className="employeement-container">
+        <div className="employeement-container about-container-ref">
           <h3 className="employeement-header">Employment</h3>
           <div className="about-svg work-svg"></div>
 
