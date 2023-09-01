@@ -11,7 +11,7 @@ export default function Home() {
   
 
   return (
-    <div style={{backgroundColor: '#f3f3f3', position: 'relative'}}>
+    <div style={{backgroundColor: '#f3f3f3'}}>
       <ReactLenis root>
         <Hero />
         <TransitionFromProject>
