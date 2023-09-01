@@ -74,7 +74,6 @@ export default function Hero() {
         duration: 1,
         text: word,
         ease: "power2.inOut",
-        backgroundImage: "linear-gradient(150deg, rgba(0,255,21,1) 25%, rgba(0,255,244,1) 75%)",
       });
       tlMasterText.add(tlText);
     });

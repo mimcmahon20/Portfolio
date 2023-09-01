@@ -49,7 +49,7 @@ export default function AboutContent() {
         </div>
 
         <div className="employeement-container">
-          <h3 className="employeement-header">Employeement</h3>
+          <h3 className="employeement-header">Employment</h3>
           <div className="about-svg work-svg"></div>
 
           <div className="about-divider"></div>
