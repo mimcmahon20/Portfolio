@@ -75,9 +75,9 @@ export default function McFlix() {
 
 
   //we will just set the window y to the top of the page
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({top: 0, behavior: 'smooth'});
+  // }, []);
 
   //GSAP CAROUSEL
   let carousel = useRef(null);
@@ -165,10 +165,12 @@ export default function McFlix() {
       <BackButton />
       <TransitionToProject>
         {/* <SnakeListItem numHeadings={numHeadings} /> */}
+        <div className="project-layout">{generateProject()}</div>
+
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
-              <ProjectMedia url={"/Videos/mcflixvideo.mp4"} type={"video"} />
+              <ProjectMedia url={"/Videos/mcflixvideo.mp4"} type={"video"} thumbnail={mcflixscreenshot} />
               <ProjectMedia url={mcflixscreenshot} type={"image"} />
             </div>
             <div className="carousel-buttons">
@@ -177,7 +179,6 @@ export default function McFlix() {
             </div>
           </div>
         </div>
-        <div className="project-layout">{generateProject()}</div>
       </TransitionToProject>
     </div>
   );

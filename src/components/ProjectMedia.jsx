@@ -2,13 +2,13 @@ import React from "react";
 import "../styles/ProjectMedia.css";
 
 export default function ProjectMedia(props) {
-  const { url, type } = props;
+  const { url, type, thumbnail } = props;
 
   function generateMedia() {
     if(window.innerWidth < 600) {
       if (type === "video") {
         return (
-          <video className="project-video" muted controls loop>
+          <video className="project-video" poster={thumbnail} muted controls loop>
             <source src={url} type="video/mp4" className={type} />
           </video>
         );
@@ -20,7 +20,7 @@ export default function ProjectMedia(props) {
     }
     if (type === "video") {
       return (
-        <video className="project-video" autoPlay muted controls loop>
+        <video className="project-video" poster={thumbnail} muted controls loop>
           <source src={url} type="video/mp4" className={type} />
         </video>
       );

@@ -5,7 +5,7 @@ const animations = {
   animate: { x: 0 },
   exit: { x: -window.innerWidth },
   transitionEnd: {
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 5.5, ease: "easeIn" },
   },
 };
 
