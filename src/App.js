@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect } from "react";
 import {  Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Home from "./pages/Home";
 import Snake from "./pages/Snake";

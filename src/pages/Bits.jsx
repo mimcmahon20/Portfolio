@@ -70,9 +70,10 @@ export default function Bits() {
   }
 
   //we will just set the window y to the top of the page
-  // useEffect(() => {
-  //   window.scrollTo({top: 0, behavior: 'smooth'});
-  // }, []);
+  useEffect(() => {
+    setTimeout(window.scrollTo({top: 0, behavior: 'smooth'}), 5000);
+    console.log("bits loaded");
+  }, []);
 
   //GSAP CAROUSEL
   let carousel = useRef(null);
@@ -154,7 +155,7 @@ export default function Bits() {
     }
   };
   return (
-    <div class="project-wrapper">
+    <div className="project-wrapper">
       <Nav />
       <BackButton />
       <TransitionToProject>

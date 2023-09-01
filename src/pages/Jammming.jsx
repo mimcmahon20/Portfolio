@@ -72,10 +72,10 @@ export default function Jammming() {
   }
 
   //we will just set the window y to the top of the page
-  // useEffect(() => {
-  //   window.scrollTo({top: 0, behavior: 'smooth'});
+  useEffect(() => {
+    setTimeout(window.scrollTo({top: 0, behavior: 'smooth'}), 500);
 
-  // }, []);
+  }, []);
 
   //GSAP CAROUSEL
   let carousel = useRef(null);

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const animations = {
-  initial: { x: window.innerWidth  },
+  initial: { x: 0, y: 0  },
   animate: { x: 0 },
-  exit: { x: -window.innerWidth },
+  exit: { x: 0 },
   transitionEnd: {
-    transition: { duration: 5.5, ease: "easeIn" },
+    transition: { duration: 0.5, ease: "easeIn" },
   },
 };
 
