@@ -35,14 +35,16 @@ export default function ProjectsIntro() {
 //         });
 // }, [ProjectsIntroRef]);
 
+    let projectIntroMessage = 'Projects';
+    if(window.innerWidth < 768) projectIntroMessage = 'Click to see project!';
+
     return (
         <div className="projectsIntro">
 
 
             <div className="intro-boundary left-boundary"></div>
-            <h2 className="projectsIntro-header">Work & Projects</h2>
+            <h2 className="projectsIntro-header">{projectIntroMessage}</h2>
             <div className="intro-boundary right-boundary"></div>
-
         </div>
       );
 }
