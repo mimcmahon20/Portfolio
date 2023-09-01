@@ -5,7 +5,7 @@ const animations = {
   animate: { x: 0  },
   exit: { x: window.innerWidth  },
   transitionEnd: {
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
 };
 
@@ -16,7 +16,7 @@ const TransitionFromProject = ({ children }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: .75, ease: "easeOut" }}
+      transition={{ duration: .3, ease: "easeIn" }}
       
       style={{overflow: 'hidden'}}
     >

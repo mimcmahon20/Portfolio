@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const animations = {
-  initial: { x: 0, y: 0  },
+  initial: { x: window.innerWidth, y: 0  },
   animate: { x: 0 },
-  exit: { x: 0 },
+  exit: { x: -window.innerWidth },
   transitionEnd: {
-    transition: { duration: 0.5, ease: "easeIn" },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
 };
 
@@ -16,7 +16,7 @@ const TransitionToProject = ({ children }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: .5, ease: "easeOut" }}
+      transition={{ duration: .3, ease: "easeIn" }}
       style={{overflow: 'hidden'}}
     >
       {children}

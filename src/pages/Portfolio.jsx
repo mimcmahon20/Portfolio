@@ -71,7 +71,7 @@ export default function Portfolio() {
 
   //we will just set the window y to the top of the page
   useEffect(() => {
-    setTimeout(window.scrollTo({top: 0, behavior: 'smooth'}), 500);
+    setTimeout(window.scrollTo({top: 0, behavior: 'instant'}), 0);
     
   }, []);
 
