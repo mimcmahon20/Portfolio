@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/ListItem.css";
 import { gsap } from "gsap";
+// import MouseFollower from "./MouseFollower";
 
 export default function McFlixListItem(props) {
   const numHeadings = props.numHeadings;
@@ -49,6 +50,8 @@ export default function McFlixListItem(props) {
 
   return (
     <div className="list-item mcflixListitem">
+
+
       <div className="recs">
         <div className="first-rec-cover">
           <div className="rectangle first-rec rectanglestraight"></div>

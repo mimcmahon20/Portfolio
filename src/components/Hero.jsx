@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Nav from "./Nav";
 import HeroText from "./HeroText";
-
+// import MouseFollower from "./MouseFollower";
 import "../styles/Hero.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
