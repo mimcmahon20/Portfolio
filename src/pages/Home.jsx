@@ -7,7 +7,7 @@ import TransitionFromProject from "../components/TransitionFromProject";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{backgroundColor: '#f3f3f3', position: 'relative'}}>
       <ReactLenis root>
         <Hero />
         <TransitionFromProject>

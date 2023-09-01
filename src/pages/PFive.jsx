@@ -69,8 +69,7 @@ export default function PFive() {
 
   //we will just set the window y to the top of the page
   useEffect(() => {
-    let thirtyVh = window.innerHeight * 0.3;
-   window.scrollTo(0, thirtyVh);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }, []);
 
@@ -156,7 +155,7 @@ export default function PFive() {
 
 
   return (
-    <div style={{backgroundColor: '#0a0a0a', position: 'relative'}}>
+    <div className="project-wrapper">
       <Nav />
         <BackButton />
       <TransitionToProject>
