@@ -40,7 +40,6 @@ export default function AboutContent() {
             <br/>
             <ul > <div className="mid-header">Codecademy</div>  
               <li>Frontend Engineering Career Course</li>
-              <li>Learned:</li>
               <li style={{marginLeft: '20px'}}>Web development from HTML to React</li>
               <li style={{marginLeft: '20px'}}>Interview skills</li>
               <li style={{marginLeft: '20px'}}>Git</li>
@@ -59,14 +58,12 @@ export default function AboutContent() {
                 <li>Fall '22 - Fall '23</li>  
               <li>Oversaw website transition between companies,<br/>4 interns, website front & backend in Wordpress, <br/> and generated weekly & monthly goals & reports.</li>
               <li>Promoted from Web Dev Intern to Development Team Lead in January '23.</li>
-              <li>Rate: Unpaid</li>
             </ul>
             <br/>
             <ul > <div className="mid-header">Scale A.I.</div>  
               <li>Code Analyser & Categorizer</li>
               <li>Summer '23</li>
               <li>Helped categorize and analyze code from several Large Language Models.</li>
-              <li>Rate: $25 / hour</li>
             </ul>
           </div>
         </div>
