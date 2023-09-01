@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/ProjectsIntro.css";
+import ClickHere from "./ClickHere";
 // import { useRef, useEffect } from "react";
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -36,13 +37,14 @@ export default function ProjectsIntro() {
 // }, [ProjectsIntroRef]);
 
     let projectIntroMessage = 'Projects';
-    if(window.innerWidth < 768) projectIntroMessage = 'Click to see project!';
+    if(window.innerWidth < 768) projectIntroMessage = 'Click a project!';
 
     return (
         <div className="projectsIntro">
 
 
             <div className="intro-boundary left-boundary"></div>
+            {/* {window.innerWidth < 768 ? <ClickHere></ClickHere> : null} */}
             <h2 className="projectsIntro-header">{projectIntroMessage}</h2>
             <div className="intro-boundary right-boundary"></div>
         </div>
