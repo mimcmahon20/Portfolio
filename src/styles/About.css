@@ -1,11 +1,7 @@
 .about-transition {
     height: 100vh;
-    background-color: #f3f3f3;
-    overflow: hidden;
-}
 
-.about {
-    
+    overflow: hidden;
 }
 
 .about-intro {
@@ -20,7 +16,7 @@
     font-family: 'LEXEND', sans-serif;
     font-weight: 500;
     overflow: hidden;
-    
+    background-color: #f3f3f3;
 }
 
 .about-name {
@@ -51,7 +47,7 @@
     .about-intro {
         height: 500px;
         font-size: 1.9rem;
-        mix-blend-mode: difference;
+
     }
 
     .headshot {

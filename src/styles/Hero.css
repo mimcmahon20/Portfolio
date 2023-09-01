@@ -5,8 +5,18 @@
 }
 
 .arrows-container {
-    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 35vh;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .arrows-container {
+        height: 25vh;
+    }
 }
 
 .scroll-to-projects{ 
