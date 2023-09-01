@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/ProjectsIntro.css";
-import ClickHere from "./ClickHere";
+// import ClickHere from "./ClickHere";
 // import { useRef, useEffect } from "react";
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
