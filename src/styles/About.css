@@ -55,3 +55,9 @@
         height: 200px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .about-intro {
+        font-size: 1.2rem;
+    }
+}

@@ -1,15 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import Nav from "../components/Nav";
-import TransitionToProject from "../components/TransitionToProject";
 import "../styles/Project.css";
 import "../styles/ProjectsList.css";
 import "../fonts/fonts.css";
+import Nav from "../components/Nav";
+import TransitionToProject from "../components/TransitionToProject";
 import ProjectMedia from "../components/ProjectMedia";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescription";
 import ProjectFramework from "../components/ProjectFramework";
 import ProjectLinks from "../components/ProjectLinks";
 import BackButton from "../components/BackButton";
+import snakeThumbnail from "../media/snakeThumbnail.png";
+import djThumbnail from "../media/djThumbnail.png";
 
 import gsap from "gsap";
 
@@ -75,8 +77,8 @@ export default function Snake() {
 
   //we will just set the window y to the top of the page
   useEffect(() => {
-    let thirtyVh = window.innerHeight * 0.3;
-    window.scrollTo(0, thirtyVh);
+    setTimeout(window.scrollTo({top: 0, behavior: 'instant'}), 0);
+    
   }, []);
 
   //GSAP CAROUSEL
@@ -92,7 +94,7 @@ export default function Snake() {
 
   window.addEventListener('resize', () => {
     if(window.innerWidth < 1000) {
-      mediaWidth = 500;
+      mediaWidth = 400;
     } else {
       mediaWidth = 1000;
     }
@@ -160,16 +162,18 @@ export default function Snake() {
 
 
   return (
-    <div style={{ backgroundColor: "#0a0a0a", position: "relative" }}>
+    <div className="project-wrapper">
       <Nav />
       <BackButton />
       <TransitionToProject>
         {/* <SnakeListItem numHeadings={numHeadings} /> */}
+        <div className="project-layout">{generateProject()}</div>
+
         <div className="center-carousel">
           <div className="carousel-container">
             <div className="media-carousel" ref={(el) => (carousel = el)}>
-              <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} />
-              <ProjectMedia url={"/Videos/djvideo.mp4"} type={"video"} />
+              <ProjectMedia url={"/Videos/snakevideo.mp4"} type={"video"} thumbnail={snakeThumbnail}/>
+              <ProjectMedia url={"/Videos/djvideo.mp4"} type={"video"} thumbnail={djThumbnail}/>
             </div>
             <div className="carousel-buttons">
               <button className="left-carousel carousel-button" onClick={slideLeft}></button>
@@ -177,7 +181,6 @@ export default function Snake() {
             </div>
           </div>
         </div>
-        <div className="project-layout">{generateProject()}</div>
       </TransitionToProject>
     </div>
   );

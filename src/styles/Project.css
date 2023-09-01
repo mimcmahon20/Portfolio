@@ -1,3 +1,8 @@
+.project-wrapper {
+  background-color: #f3f3f3;
+  position: relative;
+}
+
 .back-button {
   text-decoration: none;
   width: 50px;

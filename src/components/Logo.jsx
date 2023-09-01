@@ -1,5 +1,6 @@
 import React from "react";
 import "@lottiefiles/lottie-player";
+import "../styles/Nav.css";
 
 export default function Logo() {
   return (
