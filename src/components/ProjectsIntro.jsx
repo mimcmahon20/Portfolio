@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/ProjectsIntro.css";
 // import { useRef, useEffect } from "react";
 // import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MouseFollower from "./MouseFollower";
 
 export default function ProjectsIntro() {
 //     const ProjectsIntroRef = useRef(null);
@@ -35,6 +37,8 @@ export default function ProjectsIntro() {
 
     return (
         <div className="projectsIntro">
+
+
             <div className="intro-boundary left-boundary"></div>
             <h2 className="projectsIntro-header">Work & Projects</h2>
             <div className="intro-boundary right-boundary"></div>
