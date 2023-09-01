@@ -61,6 +61,16 @@
     margin-top: 7px;
 }
 
+.mid-header > a {
+    color: rgba(0,0,255,0.8);
+    cursor: pointer;
+}
+
+.outbound-link:hover {
+    color: rgb(0, 0, 255, 1.0);
+    text-decoration: underline;
+}
+
 .about-svg {
     position: absolute;
     top: 0;
