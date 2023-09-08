@@ -14,7 +14,7 @@ export default function JammmingListItem(props) {
     let timelineJammmingLeft = gsap.timeline({});
 
     let timelineJammmingRight = gsap.timeline({});
-
+    
     jammming.addEventListener("mouseenter", () => {
       timelineJammmingLeft.clear();
       timelineJammmingRight.clear();

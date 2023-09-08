@@ -14,37 +14,63 @@ gsap.registerPlugin(TextPlugin);
 export default function Hero() {
   const HeroRef = useRef(null);
 
-  //animating the arrows 
+  //animating the arrows
   useEffect(() => {
-
     const scroller = HeroRef.current.querySelector(".scroller");
     const firstLine = HeroRef.current.querySelector(".first-line");
     const secondLine = HeroRef.current.querySelector(".second-line");
 
     let HeroTimeline = gsap.timeline({});
 
-    if(window.scrollY < 100) {
+    if (window.scrollY < 100) {
       //animating lines of text
-      HeroTimeline.fromTo(firstLine, { opacity: 0, x: window.innerWidth/2 }, { opacity: 1, x:0, duration: .4, delay: 0.6});
-      HeroTimeline.fromTo(secondLine, { opacity: 0, x: -window.innerWidth/2 }, { opacity: 1, x: 0, duration: .4, delay: 0.2}, "<");
-      
+      HeroTimeline.fromTo(
+        firstLine,
+        { opacity: 0, skewX: 15,skewY: 15, x: -10, text: "" },
+        { opacity: 1, skewX: 0,skewY: 0, x: 0, text: "You just found your", duration: 0.4, delay: 0.6 }
+      );
+      //animate the letters to fall in one at a time
+        
+
+      HeroTimeline.fromTo(
+        secondLine,
+        { opacity: 0, skewX: 15, skewY: 15, x: -10, text: "" },
+        { opacity: 1, skewX: 0, skewY: 0, x: 0, text: 'next', duration: 0.4, delay: 0.2 },
+        "<"
+      );
+
       //animating arrows
-      HeroTimeline.fromTo(scroller, { opacity: 0}, { delay: 0.4, opacity: 1, duration: .2});
-  
+      HeroTimeline.fromTo(
+        scroller,
+        { opacity: 0 },
+        { delay: 0.4, opacity: 1, duration: 0.2 }
+      );
+
       //animating small scroll to projects in bottom right
-      HeroTimeline.fromTo(".scroll-to-projects", { opacity: 0 }, { opacity: 1, duration: 1, delay: 1.5 }, "-=2");
+      HeroTimeline.fromTo(
+        ".scroll-to-projects",
+        { opacity: 0 },
+        { opacity: 1, duration: 1, delay: 1.5 },
+        "-=2"
+      );
 
-      HeroTimeline.fromTo(scroller, {y: 0}, { y: 250, duration: 1, stagger: .1, scrollTrigger: {
-        trigger: ".hero",
-        start: "50% 50%",
-        end: "bottom 50%",
-        scrub: true,
-        markers: false,
-      }})
+      HeroTimeline.fromTo(
+        scroller,
+        { y: 0 },
+        {
+          y: 250,
+          duration: 1,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".hero",
+            start: "50% 50%",
+            end: "bottom 50%",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
     }
-
-
-
   }, []);
 
   //animating the cursor
@@ -67,9 +93,9 @@ export default function Hero() {
     "Programmer",
   ];
   useEffect(() => {
-    let tlMasterText = gsap.timeline({ repeat: -1 });
+    let tlMasterText = gsap.timeline({ repeat: -1, delay: 1.2 });
     words.forEach((word) => {
-      let tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
+      let tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 0.4 });
       tlText.to(".words", {
         duration: 1,
         text: word,
@@ -86,8 +112,6 @@ export default function Hero() {
   //   }
   //   return arrows;
   // }
-
-
 
   return (
     <div ref={HeroRef} className="hero">
