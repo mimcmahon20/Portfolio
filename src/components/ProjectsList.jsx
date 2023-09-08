@@ -15,24 +15,27 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProjectsList() {
   const projListRef = useRef(null);
   //
+
   useEffect(() => {
-    gsap.fromTo(
-      ".projects-heading",
-      {
-        x: "0px",
-      },
-      {
-        x: "-1500px",
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".projects-list",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-          markers: false,
+    if (window.innerWidth > 600) {
+      gsap.fromTo(
+        ".projects-heading",
+        {
+          x: "0px",
         },
-      }
-    );
+        {
+          x: "-1500px",
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".projects-list",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+    }
   }, []);
 
   function numHeadings(num, name) {
@@ -78,19 +81,19 @@ export default function ProjectsList() {
         <div className="projects-divider"></div>
       </div>
       <Link to="/Snake">
-        <SnakeListItem numHeadings={numHeadings}/>
+        <SnakeListItem numHeadings={numHeadings} />
       </Link>
       <div className="flex" style={{ height: "100px" }}>
         <div className="projects-divider"></div>
       </div>
       <Link to="/Jammming">
-        <JammmingListItem numHeadings={numHeadings}/>
+        <JammmingListItem numHeadings={numHeadings} />
       </Link>
       <div className="flex">
         <div className="projects-divider"></div>
       </div>
       <Link to="/Bits">
-        <BitsListItem numHeadings={numHeadings}/>
+        <BitsListItem numHeadings={numHeadings} />
       </Link>
       <div className="flex">
         <div className="projects-divider"></div>
