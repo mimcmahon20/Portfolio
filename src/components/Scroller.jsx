@@ -9,7 +9,7 @@ export default function Scroller() {
         autoplay
         loop
         mode="normal"
-
+        direction="-1"
         src="https://lottie.host/a831bf2a-3047-4bfe-920f-f4267402c8ef/x7e5TzqrIj.json"
       ></lottie-player>
     </div>
