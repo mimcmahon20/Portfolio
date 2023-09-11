@@ -1,5 +1,6 @@
 import React, {useEffect } from "react";
 import {  Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import ReactGA from 'react-ga4';
 import Home from "./pages/Home";
 import Snake from "./pages/Snake";
 import Jammming from "./pages/Jammming";
@@ -10,9 +11,13 @@ import McFlix from "./pages/McFlix";
 
 import "./styles/App.css";
 
+const TRACKING_ID = 'G-1LPNQ4CBDT';
+ReactGA.initialize(TRACKING_ID);
+
 export default function App() {
 
   useEffect(() => {
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
     window.addEventListener('error', e => {
         if (e.message === 'ResizeObserver loop limit exceeded') {
             const resizeObserverErrDiv = document.getElementById(
